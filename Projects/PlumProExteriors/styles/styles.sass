@@ -1,0 +1,390 @@
+/*Theme name: Plum ProExteriors*/
+$violet: #aa226c
+$violetDark: #6a1442
+$plum: #4e4981
+$plumDark: #333056
+$plumBack: #272636
+$plumLight: rgba(165, 161, 229, 0.44)
+$plumTr: rgba(78, 73, 129, 0.70)
+$green: #71bf45
+$greenTr: rgba(113, 191, 69, 0.70)
+$white: white
+//
+#page-preloader
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background: white
+  z-index: 100500
+$preloaderWidth: 100px
+$preloaderMargin: $preloaderWidth / 2
+.plum-preloader
+  width: 100px
+  height: 100px
+  position: absolute
+  left: 50%
+  top: 50%
+  background: url('../images/preloader.png') no-repeat 50% 50%
+  margin: -50px 0 0 -50px
+
+//Google Fonts Import
+
+//font-family: 'Averia Serif Libre', cursive
+//@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700')
+@import url('../fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700')
+//font-family: 'Neuton', serif
+//@import url('https://fonts.googleapis.com/css?family=Neuton:400,700')
+@import url('../fonts/google/neuton/css.css?family=Neuton:400,700')
+
+@import "../libs/bootstrap/scss/_functions.scss"
+@import "../libs/bootstrap/scss/_variables.scss"
+@import "../libs/bootstrap/scss/mixins/_breakpoints.scss"
+
+.ft1
+  font-family: 'Neuton', serif
+.ft2
+  font-family: 'Averia Serif Libre', cursive
+
+body
+  @extend .ft1
+  letter-spacing: 0.04rem
+
+.item-disabled
+  display: none
+
+$upLineFontSize: 1.3rem
+$menuFontSize: 1.2rem
+
+::selection
+  background-color: $greenTr
+  color: $plumBack !important
+
+
+@media only screen and (min-width: 992px)
+  .dropdown:hover .dropdown-menu
+    margin-top: 0
+  .dropdown
+    position: relative
+    & .dropdown-menu
+      display: block
+      visibility: hidden
+      margin-top: 0
+.navbar-brand img
+  height: 100px
+
+.up-line
+  background-color: $violetDark
+  color: $white
+  font-size: $upLineFontSize
+  text-transform: uppercase
+  font-weight: bold
+
+.up-icon-link
+  color: $white
+  padding: 5px
+  font-size: $upLineFontSize
+  &:hover
+    color: $green
+
+nav
+  background-color: $plumBack
+  text-transform: uppercase
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.20), inset 0 -5px 5px -5px rgba(0, 0, 0, 0.20)
+
+.icon
+  font-weight: normal
+
+.nav-color
+  color: white
+  font-size: $menuFontSize !important
+  font-weight: bold
+  & span
+    text-shadow: none
+  &:hover
+    color: $violet
+    text-shadow: none
+    background: none
+
+.sub-menu
+  @extend nav
+  border: none
+  border-radius: 0
+  border-top: 2px solid $violet
+
+.navbar-toggler
+  position: relative
+
+$swW: 28px
+$swH: 3px
+.sandwich
+  width: $swW
+  height: $swW
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  z-index: 15
+  display: block
+.sw-line
+  position: relative
+  width: $swW
+  height: $swH
+  background: rgb(255, 255, 255)
+  border: none
+  border-radius: 1px
+  display: block
+.sw-topper
+  @extend .sw-line
+  top: 0
+  transition: transform 0.5s, top 0.2s
+.sw-bottom
+  @extend .sw-line
+  top: $swH * 2
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s
+.sw-footer
+  @extend .sw-line
+  top: $swH * 4
+  transition: all 0.5s
+  transition-delay: 0.1s
+.sandwich.active
+  .sw-topper
+    top: 11px
+    transform: rotate(140deg)
+  .sw-bottom
+    top: 7px
+    transform: rotate(-140deg)
+  .sw-footer
+    opacity: 0
+    top: 0
+    transform: rotate(180deg)
+
+@media only screen and (max-width: 992px)
+  .sub-menu
+    border: none
+    box-shadow: none
+  .nav-color
+    border-bottom: 1px solid $violet
+  .sub-menu .nav-color
+    border-bottom: 1px solid $plum
+
+$footerFS: 1.2rem
+footer
+  background-color: $plumBack
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35)
+  font-size: $footerFS
+footer h4
+  font-size: $footerFS * 1.4
+  color: $green
+.footer-icon-link
+  @extend .up-icon-link
+  font-size: $upLineFontSize * 2
+  &:hover
+    color: $violet
+footer p
+  color: $white
+.footer-links
+  color: $white
+  &:hover
+    color: $violet
+    text-decoration: none
+footer ul
+  list-style: none
+.services-link
+  padding-left: 0.2rem
+  .plumicon
+    color: $white
+
+.slideshow .carousel-item
+  background-size: cover !important
+  background-position: center center !important
+  background-repeat: no-repeat !important
+section.slideshow
+  position: relative  !important
+.carousel-text
+  position: absolute
+  z-index: 10
+$carouselH1: 1.5rem
+$carouselA: 0.4rem
+$carouselAa: $carouselA * 2
+$carouselBtwn: 10rem
+$f-sm: 1.5
+$f-md: 2
+$f-lg: 2.5
+$f-xl: 3
+.carousel-text h1.carousel-text-header
+  @extend .ft2
+  font-size: $carouselH1 * 1.4
+  color: white
+  text-shadow: 0 0 3px $violet, 0 5px 8px rgba(0, 0, 0, 0.42)
+  @include media-breakpoint-up(sm)
+    font-size: $carouselH1 * $f-sm
+  @include media-breakpoint-up(md)
+    font-size: $carouselH1 * $f-md
+  @include media-breakpoint-up(lg)
+    font-size: $carouselH1 * $f-lg
+  @include media-breakpoint-up(xl)
+    font-size: $carouselH1 * $f-xl
+.carousel-text a.carousel-text-link
+  color: white
+  display: inline-block
+  font-weight: bold
+  border-radius: $carouselA * 0.5
+  border: 1px solid $plum
+  padding: $carouselAa * 0.9 $carouselAa * 1.2 $carouselAa
+  background-color: $plumTr
+  cursor: pointer
+  text-transform: uppercase
+  line-height: 1
+  text-align: center
+  margin-top: $carouselBtwn
+  &:hover
+    background-color: $plum
+    text-decoration: none
+  @include media-breakpoint-up(sm)
+    font-size: $carouselA * $f-sm * 1.4
+    margin-top: $carouselBtwn * 0.6
+  @include media-breakpoint-up(md)
+    font-size: $carouselA * $f-md * 0.9
+    margin-top: $carouselBtwn
+  @include media-breakpoint-up(lg)
+    font-size: $carouselA * $f-lg * 0.9
+    margin-top: $carouselBtwn
+  @include media-breakpoint-up(xl)
+    font-size: $carouselA * $f-xl
+    margin-top: $carouselBtwn
+
+$mainTextFtSize: 1.35rem
+.main-text
+  color: $plumDark
+  & p, ul
+    font-size: $mainTextFtSize
+section.main-text
+  background-color: white
+
+.custom-width-text
+  letter-spacing: 0.02rem
+
+$aLink: 0.8rem
+.button-link
+  color: $plumDark
+  display: inline-block
+  font-weight: bold
+  border-radius: $aLink * 0.25
+  border: 1px solid $plum
+  padding: $aLink * 0.9 $aLink * 1.2 $aLink
+  cursor: pointer
+  text-transform: uppercase
+  line-height: 1
+  text-align: center
+  &:hover
+    background-color: $plum
+    color: white
+    text-decoration: none
+
+.card-link
+  color: $plumDark
+  &:hover
+    color: $violet
+.card
+  border-color: $plumLight
+  display: block
+.card-link-wrap
+  height: 100%
+
+.parallax-window
+  min-height: 400px
+  background: none
+.parallax-text
+  background: rgba(255, 255, 255, 0.6)
+  color: $plum
+
+$slideShowBtnColor: rgba(256,256,256,0.35)
+
+.ph-folder-icon img, .ph-icon-img
+  cursor: pointer
+#photoGalleryCarousel
+  display: none
+  & .carousel-inner
+    position: fixed
+    top: 0
+    z-index: 100
+  & .carousel-item
+    background-size: contain !important
+    background-position: center center !important
+    background-repeat: no-repeat !important
+  & .slideshow-img
+    cursor: pointer
+  & .close-slideshow
+    position: absolute
+    top: 0
+    right: 0
+    padding: 1rem
+    color: $slideShowBtnColor
+  & .carousel-controller
+
+.ph-folder-icon:hover .img-mask
+  display: block
+.img-mask
+  display: none
+  background-color: rgba(0,0,0,0.35)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+  text-align: center
+  cursor: pointer
+.img-mask-icon
+  display: block
+  font-size: 2rem
+  color: $slideShowBtnColor
+  position: absolute
+  right: 0
+  bottom: 0
+  margin: auto
+
+.review-links
+  & .review-icon-link
+    font-size: 4rem
+    color: inherit
+    & :hover
+      color: $violet
+.review-nav-item
+  & a.review-nav-tab.active
+    color: $plumDark
+    font-size: 1.5rem
+    font-weight: bold
+    background: none
+  & a.review-nav-tab
+    color: $plumDark
+    font-size: 1.5rem
+    background: none
+.nav-pills
+  & a.review-nav-tab.active
+    background: $plumLight
+button.form-submit-button
+  background-color: $plumLight
+  color: $plumDark
+  & :hover
+    color: $violet
+.aboutSlideShow p
+  line-height: 1.2
+  @include media-breakpoint-up(md)
+    line-height: 1.5
+$contactIconSize: 10rem
+.contact-icon
+  font-size: $contactIconSize
+.contact-icon-link
+  color: $plumDark
+  margin-right: 0.5rem
+  font-size: 2.5rem
+  & :hover
+    color: $violet
+#contactForm
+  font-size: $mainTextFtSize

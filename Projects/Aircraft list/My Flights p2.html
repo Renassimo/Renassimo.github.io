@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flights</title>
+    <link rel="stylesheet" type="text/css" href="My%20Flights.css"/>
+    <meta charset="utf-8"/>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div>
+    <article>
+<table border="1">
+    <thead>
+    <tr>
+        <td class="num">Num</td>
+        <td class="date">Date</td>
+        <td class="airln">Airline</td>
+        <td class="airct">Aircraft</td>
+        <td class="fnum">Flight<br>number</td>
+        <td class="orig">Origin</td>
+        <td class="dest">Destination</td>
+        <td class="st">Seat</td>
+        <td class="reg">Aircraft<br/>registration</td>
+        <td class="cn">c/n</td>
+        <td class="pic">Picture,<br/>Name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>13</td>
+        <td>1 Oct<br/>2015</td>
+        <td>Transaero Airlines</td>
+        <td>Boeing 737-500</td>
+        <td>UN 147</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Астрахань, Нариманово">ASF</td>
+        <td>26F</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/25183" target="_blank">EI-DTV</a></td>
+        <td>25183</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/614000/original/ei-dtv-transaero-airlines-boeing-737-5y0_PlanespottersNet_614942.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/614000/original/ei-dtv-transaero-airlines-boeing-737-5y0_PlanespottersNet_614942.jpg"
+                alt="737-500"/></a>
+        </td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>5 Oct.<br/>2015</td>
+        <td>Transaero Airlines</td>
+        <td>Boeing 737-500</td>
+        <td>UN 148</td>
+        <td title="Астрахань, Нариманово">ASF</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td>27F</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/28922" target="_blank">VP-BYO</a></td>
+        <td>28922</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/250000/original/vp-byo-transaero-airlines-boeing-737-524_PlanespottersNet_250291.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/250000/original/vp-byo-transaero-airlines-boeing-737-524_PlanespottersNet_250291.jpg"
+                alt="737-500"/></a>
+        </td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>5 Oct.<br/>2015</td>
+        <td>S7 Airlines</td>
+        <td>Airbus A319</td>
+        <td>S7 069</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Казань">KZN</td>
+        <td>20F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/1131" target="_blank">VP-BTP</a></td>
+        <td>1131</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/587000/original/vp-btp-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_587217.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/587000/original/vp-btp-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_587217.jpg"
+               alt="A319"/></a></td>
+    </tr>
+        <tr>
+        <td>16</td>
+        <td>10 Dec.<br/>2015</td>
+        <td>Qatar Airways<br>(S7 Airlines)</td>
+        <td>Airbus A319</td>
+        <td>QR 5713<br/>(S7 062)</td>
+        <td title="Казань">KZN</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td>11F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/2369" target="_blank">VP-BHJ</a></td>
+        <td>2369</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/334000/original/vp-bhj-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_334012.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/334000/original/vp-bhj-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_334012.jpg"
+               alt="A319"/></a></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>10 Dec.<br/>2015</td>
+        <td>Qatar Airways</td>
+        <td>Airbus A320</td>
+        <td>QR 230</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Доха, Хамад">DOH</td>
+        <td>9F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/4858" target="_blank">A7-AHP</a></td>
+        <td>4858</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/269000/original/a7-ahp-qatar-airways-airbus-a320-232_PlanespottersNet_269250.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/269000/original/a7-ahp-qatar-airways-airbus-a320-232_PlanespottersNet_269250.jpg"
+                alt="A320"/></a></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>11 Dec.<br/>2015</td>
+        <td>Qatar Airways</td>
+        <td>Airbus A380</td>
+        <td>QR 836</td>
+        <td title="Доха, Хамад">DOH</td>
+        <td title="Бангкок, Суварнабхуми">BKK</td>
+        <td>53K</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A380/181" target="_blank">A7-APE</a></td>
+        <td>181</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/695000/original/a7-ape-qatar-airways-airbus-a380-861_PlanespottersNet_695402.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/695000/original/a7-ape-qatar-airways-airbus-a380-861_PlanespottersNet_695402.jpg"
+                alt="A380"/></a></td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>14 Dec.<br/>2015</td>
+        <td>Nok Air</td>
+        <td>Boeing 737-800</td>
+        <td>DD 7510</td>
+        <td title="Бангкок, Донмыанг">DMK</td>
+        <td title="Пхукет">HKT</td>
+        <td>36K</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/61294" target="_blank">HS-DBU</a></td>
+        <td>61294</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/722000/original/hs-dbu-nok-air-boeing-737-88lwl_PlanespottersNet_722355.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/722000/original/hs-dbu-nok-air-boeing-737-88lwl_PlanespottersNet_722355.jpg"
+               alt="737-800"/></a><br/>Nok Tubtim Siam</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>18 Dec.<br/>2015</td>
+        <td>AirAsia</td>
+        <td>Airbus A320</td>
+        <td>AK 821</td>
+        <td title="Пхукет">HKT</td>
+        <td title="Куала-Лумпур">KUL</td>
+        <td>11D<br/>(12F)</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/4571" target="_blank">9M-AQE</a></td>
+        <td>4571</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/345000/original/9m-aqe-airasia-airbus-a320-216_PlanespottersNet_345488.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/345000/original/9m-aqe-airasia-airbus-a320-216_PlanespottersNet_345488.jpg"
+                alt="A320"/></a></td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>22 Dec.<br/>2015</td>
+        <td>AirAsia</td>
+        <td>Airbus A320</td>
+        <td>AK 707</td>
+        <td title="Куала-Лумпур">KUL</td>
+        <td title="Сингапур, Чанги">SIN</td>
+        <td>23F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/3154" target="_blank">9M-AFU</a></td>
+        <td>3154</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/225000/original/9m-afu-airasia-airbus-a320-216_PlanespottersNet_225447.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/225000/original/9m-afu-airasia-airbus-a320-216_PlanespottersNet_225447.jpg"
+                alt="A320"/></a></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>27 Dec.<br/>2015</td>
+        <td>Qatar Airways</td>
+        <td>Airbus A350-900</td>
+        <td>QR 947</td>
+        <td title="Сингапур, Чанги">SIN</td>
+        <td title="Доха, Хамад">DOH</td>
+        <td>17A</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A350/007" target="_blank">A7-ALB</a></td>
+        <td>007</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/746000/original/a7-alb-qatar-airways-airbus-a350-941_PlanespottersNet_746749.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/746000/original/a7-alb-qatar-airways-airbus-a350-941_PlanespottersNet_746749.jpg"
+                alt="A350"/></a></td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>27 Dec.<br/>2015</td>
+        <td>Qatar Airways</td>
+        <td>Airbus A321</td>
+        <td>QR 233</td>
+        <td title="Доха, Хамад">DOH</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td>17F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A321/2107" target="_blank">A7-ADT</a></td>
+        <td>2107</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/411000/original/a7-adt-qatar-airways-airbus-a321-231_PlanespottersNet_411558.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/411000/original/a7-adt-qatar-airways-airbus-a321-231_PlanespottersNet_411558.jpg"
+                 alt="A321"/></a></td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>27 Dec.<br/>2015</td>
+        <td>Qatar Airways<br>(S7 Airlines)</td>
+        <td>Airbus A319</td>
+        <td>QR 5740<br/>(S7 065)</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Казань">KZN</td>
+        <td>22E</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/1819" target="_blank">VP-BHF</a></td>
+        <td>1819</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/416000/original/vp-bhf-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_416972.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/416000/original/vp-bhf-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_416972.jpg"
+               alt="A319"/></a></td>
+    </tr>
+    </tbody>
+</table><br/>
+    </article>
+</div>
+<p align="right" >Pages: <a href="My%20Flights%20p1.html">1</a>
+    <a href="My%20Flights%20p2.html">2</a>
+    <a href="My%20Flights%20p3.html">3</a>
+    <a href="My%20Flights%20p4.html">4</a>
+</p>
+<!--
+<tr>
+<td>№</td>
+<td>Date</td>
+<td>Airline</td>
+<td>Aircraft</td>
+<td>Flight number</td>
+<td>Origin</td>
+<td>Destination</td>
+<td>Seat</td>
+<td>Aircraft<br/>registration</td>
+<td>c/n</td>
+<td>Picture,<br/>Name</td>
+</tr>
+-->
+<!-- <a href="" target="_blank"><img src="" height="75" alt=""/></a> -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var planes = [];
+
+        var $row = $('tbody tr');
+        $row.each(function () {
+            var $self = $(this).children('td');
+
+            var number = $self.eq(0).html();
+            var date = $self.eq(1).html();
+            var airline = $self.eq(2).html();
+            var aircraft = $self.eq(3).html();
+            var flightNumber = $self.eq(4).html();
+            var origin = $self.eq(5).html();
+            var originTitle = $self.eq(5).attr('title');
+            var destination = $self.eq(6).html();
+            var destinationTitle = $self.eq(6).attr('title');
+            var seat = $self.eq(7).html();
+            var aircraftReg = $self.eq(8).children('a').html();
+            var aircraftRegHref = $self.eq(8).children('a').attr('href');
+            var cn = $self.eq(9).html();
+            var picHref = $self.eq(10).children('a').attr('href');
+
+            var plane = {
+                number: number,
+                date: date,
+                airline: airline,
+                aircraft: aircraft,
+                flightNumber: flightNumber,
+                origin: origin,
+                originTitle: originTitle,
+                destination: destination,
+                destinationTitle: destinationTitle,
+                seat: seat,
+                aircraftReg: aircraftReg,
+                aircraftRegHref: aircraftRegHref,
+                cn: cn,
+                picHref: picHref,
+                name: ''
+            };
+
+            planes.push(plane);
+        });
+
+        var jsn = JSON.stringify(planes);
+
+        console.log(jsn);
+        // document.write(planes);
+
+    });
+</script>
+<br /><br /><br /><br />
+</body>
+</html>

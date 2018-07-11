@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flights</title>
+    <link rel="stylesheet" type="text/css" href="My%20Flights.css"/>
+    <meta charset="utf-8"/>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<div>
+    <article>
+<table border="1">
+    <thead>
+    <tr>
+        <td class="num">Num</td>
+        <td class="date">Date</td>
+        <td class="airln">Airline</td>
+        <td class="airct">Aircraft</td>
+        <td class="fnum">Flight<br>number</td>
+        <td class="orig">Origin</td>
+        <td class="dest">Destination</td>
+        <td class="st">Seat</td>
+        <td class="reg">Aircraft<br/>registration</td>
+        <td class="cn">c/n</td>
+        <td class="pic">Picture,<br/>Name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>37</td>
+        <td>4 May<br/>2017</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Airbus A320</td>
+        <td>SU 1191</td>
+        <td title="Казань">KZN</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td>21F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/7215" target="_blank">VP-BAC</a></td>
+        <td>7215</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/752000/original/vp-bac-aeroflot-russian-airlines-airbus-a320-214wl_PlanespottersNet_752095.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/752000/original/vp-bac-aeroflot-russian-airlines-airbus-a320-214wl_PlanespottersNet_752095.jpg"
+                alt=""/></a><br/>L. Tolstoy
+        </td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>4 May<br/>2017</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Airbus A320</td>
+        <td>SU 1174</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Астрахань, Нариманово">ASF</td>
+        <td>8F</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/6954" target="_blank">VP-BJW</a></td>
+        <td>6954</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/686000/original/vp-bjw-aeroflot-russian-airlines-airbus-a320-214wl_PlanespottersNet_686807.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/686000/original/vp-bjw-aeroflot-russian-airlines-airbus-a320-214wl_PlanespottersNet_686807.jpg"
+             alt=""/></a><br/>	K. Paustovsky
+        </td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td>8 May<br/>2017</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Airbus A321</td>
+        <td>SU 1643</td>
+        <td title="Астрахань, Нариманово">ASF</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td>10A</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A321/7193" target="_blank">VP-BAE</a></td>
+        <td>7193</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/743000/original/vp-bae-aeroflot-russian-airlines-airbus-a321-211wl_PlanespottersNet_743690.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/743000/original/vp-bae-aeroflot-russian-airlines-airbus-a321-211wl_PlanespottersNet_743690.jpg"
+               alt=""/></a><br/>S. Bondarchuk
+        </td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>8 May<br/>2017</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Sukhoi Superjet 100-95B</td>
+        <td>SU 1192</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Казань">KZN</td>
+        <td>8A</td>
+        <td><a href="https://www.planespotters.net/airframe/Sukhoi/Superjet-100/95039" target="_blank">RA-89022</a></td>
+        <td>95039</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/764000/original/ra-89022-aeroflot-russian-airlines-sukhoi-superjet-100-95b_PlanespottersNet_764587.jpg?t=1496066305"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/764000/original/ra-89022-aeroflot-russian-airlines-sukhoi-superjet-100-95b_PlanespottersNet_764587.jpg?t=1496066305"
+               alt=""/></a><br/>I. Orlovets
+        </td>
+    </tr>
+    <tr>
+        <td>41</td>
+        <td>11 Jan<br/>2018</td>
+        <td>Turkish Airlines</td>
+        <td>Airbus A319</td>
+        <td>TK 428</td>
+        <td title="Казань">KZN</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td>11E</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/TC-JLY-Turkish-Airlines/x0rluL0Z" target="_blank">TC-JLY</a></td>
+        <td>4774</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/766000/original/tc-jly-turkish-airlines-airbus-a319-132_PlanespottersNet_766408_ca59804312.jpg?t=1516608398"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/766000/original/tc-jly-turkish-airlines-airbus-a319-132_PlanespottersNet_766408_ca59804312.jpg?t=1516608398"
+                 alt=""/></a><br/>Bergama
+        </td>
+    </tr>
+    <tr>
+    <td>42</td>
+    <td>11 Jan<br/>2018</td>
+    <td>Turkish Airlines</td>
+    <td>Airbus A330-300</td>
+    <td>TK 64</td>
+    <td title="Стамбул, им. Ататюрка">IST</td>
+    <td title="Бангкок, Суварнабхуми">BKK</td>
+    <td>12B</td>
+    <td><a href="https://www.planespotters.net/airframe/Airbus/A330/TC-LNE-Turkish-Airlines/5l15c6q" target="_blank">TC-LNE</a></td>
+    <td>1706</td>
+    <td class="pic"><a href="https://img.planespotters.net/photo/699000/original/tc-lne-turkish-airlines-airbus-a330-303_PlanespottersNet_699187_02afe05c01.jpg?t=1515887947"
+                       target="_blank">
+        <img src="https://img.planespotters.net/photo/699000/original/tc-lne-turkish-airlines-airbus-a330-303_PlanespottersNet_699187_02afe05c01.jpg?t=1515887947"
+             alt=""/></a><br/>Göbeklitepe
+    </td>
+    </tr>
+    <tr>
+        <td>43</td>
+        <td>22 Jan<br/>2018</td>
+        <td>Thai AirAsia</td>
+        <td>Airbus A320neo</td>
+        <td>FD 3001</td>
+        <td title="Бангкок, Донмыанг">DMK</td>
+        <td title="Пхукет">HKT</td>
+        <td>23A</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/HS-CBE-Thai-AirAsia/WQjeIWWa" target="_blank">HS-CBE</a></td>
+        <td>7921</td>
+        <td class="pic"><a href="DSC01918.JPG"
+                           target="_blank">
+            <img src="DSC01918.JPG"
+                 alt=""/></a><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>44</td>
+        <td>26 Jan<br/>2018</td>
+        <td>Thai Lion Air</td>
+        <td>Boeing 737-900ER</td>
+        <td>SL 807</td>
+        <td title="Краби">KBV</td>
+        <td title="Бангкок, Донмыанг">DMK</td>
+        <td>11A</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/HS-LTR-Thai-Lion-Air/W6d1tYJ7" target="_blank">HS-LTR</a></td>
+        <td>39837</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/619000/original/hs-ltr-thai-lion-air-boeing-737-9gperwl_PlanespottersNet_619705_052faa75be.jpg?t=1516058259"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/619000/original/hs-ltr-thai-lion-air-boeing-737-9gperwl_PlanespottersNet_619705_052faa75be.jpg?t=1516058259"
+                 alt=""/></a><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>45</td>
+        <td>26 Jan<br/>2018</td>
+        <td>Turkish Airlines</td>
+        <td>Boeing 777-300ER</td>
+        <td>TK 69</td>
+        <td title="Бангкок, Суварнабхуми">BKK</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td>16K</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/777/TC-JJK-Turkish-Airlines/yXa2fOYN" target="_blank">TC-JJK</a></td>
+        <td>40711</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/702000/original/tc-jjk-turkish-airlines-boeing-777-3f2er_PlanespottersNet_702619_ebf2ab0371.jpg?t=1515959279"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/702000/original/tc-jjk-turkish-airlines-boeing-777-3f2er_PlanespottersNet_702619_ebf2ab0371.jpg?t=1515959279"
+                 alt="Akdeniz"/></a><br/>Akdeniz
+        </td>
+    </tr>
+    <tr>
+        <td>46</td>
+        <td>27 Jan<br/>2018</td>
+        <td>Turkish Airlines</td>
+        <td>Airbus A319</td>
+        <td>TK 427</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td title="Казань">KZN</td>
+        <td>5E</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/TC-JLR-Turkish-Airlines/db89HXxb" target="_blank">TC-JLR</a></td>
+        <td>3142</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/796000/original/tc-jlr-turkish-airlines-airbus-a319-132_PlanespottersNet_796261_c6fa43ddbe.jpg?t=1515963758"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/796000/original/tc-jlr-turkish-airlines-airbus-a319-132_PlanespottersNet_796261_c6fa43ddbe.jpg?t=1515963758"
+                 alt="Bakırköy"/></a><br/>Bakırköy
+        </td>
+    </tr>
+    <tr>
+        <td>47</td>
+        <td>21 Feb<br/>2018</td>
+        <td>Pobeda</td>
+        <td>Boeing 737-800</td>
+        <td>DP 442</td>
+        <td title="Набережные Челны, Бегишево">NBC</td>
+        <td title="Москва, Внуково">VKO</td>
+        <td>10B</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/VQ-BWG-Pobeda/QPdrtQLQ" target="_blank">VQ-BWG</a></td>
+        <td>41205</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/608000/original/vq-bwg-pobeda-boeing-737-8ljwl_PlanespottersNet_608803_fe5eaf05d2.jpg"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/608000/original/vq-bwg-pobeda-boeing-737-8ljwl_PlanespottersNet_608803_fe5eaf05d2.jpg"
+                 alt=""/></a><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>48</td>
+        <td>23 Feb<br/>2018</td>
+        <td>Pobeda</td>
+        <td>Boeing 737-800</td>
+        <td>DP 441</td>
+        <td title="Москва, Внуково">VKO</td>
+        <td title="Набережные Челны, Бегишево">NBC</td>
+        <td>27E</td>
+        <td><a href="https://www.planespotters.net/airframe/Boeing/737/VQ-BTD-Pobeda/kMlLfJw6" target="_blank">VQ-BTD</a></td>
+        <td>43664</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/661000/original/vq-btd-pobeda-boeing-737-8mawl_PlanespottersNet_661621_3e3e80d94b.jpg"
+                           target="_blank">
+            <img src="https://img.planespotters.net/photo/661000/original/vq-btd-pobeda-boeing-737-8mawl_PlanespottersNet_661621_3e3e80d94b.jpg"
+                 alt=""/></a><br/>
+        </td>
+    </tr>
+    </tbody>
+</table><br/>
+    </article>
+</div>
+<p align="right" >Pages: <a href="My%20Flights%20p1.html">1</a>
+    <a href="My%20Flights%20p2.html">2</a>
+    <a href="My%20Flights%20p3.html">3</a>
+    <a href="My%20Flights%20p4.html">4</a>
+</p>
+<!--
+<tr>
+<td>№</td>
+<td>Date</td>
+<td>Airline</td>
+<td>Aircraft</td>
+<td>Flight number</td>
+<td>Origin</td>
+<td>Destination</td>
+<td>Seat</td>
+<td>Aircraft<br/>registration</td>
+<td>c/n</td>
+<td>Picture,<br/>Name</td>
+</tr>
+-->
+<!-- <a href="" target="_blank"><img src="" height="75" alt=""/></a> -->
+<br /><br /><br /><br />
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var planes = [];
+
+        var $row = $('tbody tr');
+        $row.each(function () {
+            var $self = $(this).children('td');
+
+            var number = $self.eq(0).html();
+            var date = $self.eq(1).html();
+            var airline = $self.eq(2).html();
+            var aircraft = $self.eq(3).html();
+            var flightNumber = $self.eq(4).html();
+            var origin = $self.eq(5).html();
+            var originTitle = $self.eq(5).attr('title');
+            var destination = $self.eq(6).html();
+            var destinationTitle = $self.eq(6).attr('title');
+            var seat = $self.eq(7).html();
+            var aircraftReg = $self.eq(8).children('a').html();
+            var aircraftRegHref = $self.eq(8).children('a').attr('href');
+            var cn = $self.eq(9).html();
+            var picHref = $self.eq(10).children('a').attr('href');
+
+            var plane = {
+                number: number,
+                date: date,
+                airline: airline,
+                aircraft: aircraft,
+                flightNumber: flightNumber,
+                origin: origin,
+                originTitle: originTitle,
+                destination: destination,
+                destinationTitle: destinationTitle,
+                seat: seat,
+                aircraftReg: aircraftReg,
+                aircraftRegHref: aircraftRegHref,
+                cn: cn,
+                picHref: picHref,
+                name: ''
+            };
+
+            planes.push(plane);
+        });
+
+        var jsn = JSON.stringify(planes);
+
+        console.log(jsn);
+        // document.write(planes);
+
+    });
+</script>
+</body>
+</html>

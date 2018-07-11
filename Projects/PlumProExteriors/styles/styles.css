@@ -1,0 +1,378 @@
+/*Theme name: Plum ProExteriors */
+@import url("../fonts/google/averia-serif-libre/css.css?family=Averia+Serif+Libre:400,700");
+@import url("../fonts/google/neuton/css.css?family=Neuton:400,700");
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 100500; }
+
+.plum-preloader {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../images/preloader.png") no-repeat 50% 50%;
+  margin: -50px 0 0 -50px; }
+
+.ft1, body {
+  font-family: "Neuton", serif; }
+
+.ft2, .carousel-text h1.carousel-text-header {
+  font-family: "Averia Serif Libre", cursive; }
+
+body {
+  letter-spacing: 0.04rem; }
+
+.item-disabled {
+  display: none; }
+
+::selection {
+  background-color: rgba(113, 191, 69, 0.7);
+  color: #272636 !important; }
+
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    margin-top: 0; }
+
+  .dropdown {
+    position: relative; }
+    .dropdown .dropdown-menu {
+      display: block;
+      visibility: hidden;
+      margin-top: 0; } }
+.navbar-brand img {
+  height: 100px; }
+
+.up-line {
+  background-color: #6a1442;
+  color: white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.up-icon-link, .footer-icon-link {
+  color: white;
+  padding: 5px;
+  font-size: 1.3rem; }
+  .up-icon-link:hover, .footer-icon-link:hover {
+    color: #71bf45; }
+
+nav, .sub-menu {
+  background-color: #272636;
+  text-transform: uppercase;
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.2), inset 0 -5px 5px -5px rgba(0, 0, 0, 0.2); }
+
+.icon {
+  font-weight: normal; }
+
+.nav-color {
+  color: white;
+  font-size: 1.2rem !important;
+  font-weight: bold; }
+  .nav-color span {
+    text-shadow: none; }
+  .nav-color:hover {
+    color: #aa226c;
+    text-shadow: none;
+    background: none; }
+
+.sub-menu {
+  border: none;
+  border-radius: 0;
+  border-top: 2px solid #aa226c; }
+
+.navbar-toggler {
+  position: relative; }
+
+.sandwich {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 15;
+  display: block; }
+
+.sw-line, .sw-topper, .sw-bottom, .sw-footer {
+  position: relative;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border: none;
+  border-radius: 1px;
+  display: block; }
+
+.sw-topper {
+  top: 0;
+  transition: transform 0.5s, top 0.2s; }
+
+.sw-bottom {
+  top: 6px;
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s; }
+
+.sw-footer {
+  top: 12px;
+  transition: all 0.5s;
+  transition-delay: 0.1s; }
+
+.sandwich.active .sw-topper {
+  top: 11px;
+  transform: rotate(140deg); }
+.sandwich.active .sw-bottom {
+  top: 7px;
+  transform: rotate(-140deg); }
+.sandwich.active .sw-footer {
+  opacity: 0;
+  top: 0;
+  transform: rotate(180deg); }
+
+@media only screen and (max-width: 992px) {
+  .sub-menu {
+    border: none;
+    box-shadow: none; }
+
+  .nav-color {
+    border-bottom: 1px solid #aa226c; }
+
+  .sub-menu .nav-color {
+    border-bottom: 1px solid #4e4981; } }
+footer {
+  background-color: #272636;
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.35), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.35);
+  font-size: 1.2rem; }
+
+footer h4 {
+  font-size: 1.68rem;
+  color: #71bf45; }
+
+.footer-icon-link {
+  font-size: 2.6rem; }
+  .footer-icon-link:hover {
+    color: #aa226c; }
+
+footer p {
+  color: white; }
+
+.footer-links {
+  color: white; }
+  .footer-links:hover {
+    color: #aa226c;
+    text-decoration: none; }
+
+footer ul {
+  list-style: none; }
+
+.services-link {
+  padding-left: 0.2rem; }
+  .services-link .plumicon {
+    color: white; }
+
+.slideshow .carousel-item {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important; }
+
+section.slideshow {
+  position: relative !important; }
+
+.carousel-text {
+  position: absolute;
+  z-index: 10; }
+
+.carousel-text h1.carousel-text-header {
+  font-size: 2.1rem;
+  color: white;
+  text-shadow: 0 0 3px #aa226c, 0 5px 8px rgba(0, 0, 0, 0.42); }
+  @media (min-width: 576px) {
+    .carousel-text h1.carousel-text-header {
+      font-size: 2.25rem; } }
+  @media (min-width: 768px) {
+    .carousel-text h1.carousel-text-header {
+      font-size: 3rem; } }
+  @media (min-width: 992px) {
+    .carousel-text h1.carousel-text-header {
+      font-size: 3.75rem; } }
+  @media (min-width: 1200px) {
+    .carousel-text h1.carousel-text-header {
+      font-size: 4.5rem; } }
+
+.carousel-text a.carousel-text-link {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  border: 1px solid #4e4981;
+  padding: 0.72rem 0.96rem 0.8rem;
+  background-color: rgba(78, 73, 129, 0.7);
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin-top: 10rem; }
+  .carousel-text a.carousel-text-link:hover {
+    background-color: #4e4981;
+    text-decoration: none; }
+  @media (min-width: 576px) {
+    .carousel-text a.carousel-text-link {
+      font-size: 0.84rem;
+      margin-top: 6rem; } }
+  @media (min-width: 768px) {
+    .carousel-text a.carousel-text-link {
+      font-size: 0.72rem;
+      margin-top: 10rem; } }
+  @media (min-width: 992px) {
+    .carousel-text a.carousel-text-link {
+      font-size: 0.9rem;
+      margin-top: 10rem; } }
+  @media (min-width: 1200px) {
+    .carousel-text a.carousel-text-link {
+      font-size: 1.2rem;
+      margin-top: 10rem; } }
+
+.main-text {
+  color: #333056; }
+  .main-text p, .main-text ul {
+    font-size: 1.35rem; }
+
+section.main-text {
+  background-color: white; }
+
+.custom-width-text {
+  letter-spacing: 0.02rem; }
+
+.button-link {
+  color: #333056;
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  border: 1px solid #4e4981;
+  padding: 0.72rem 0.96rem 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center; }
+  .button-link:hover {
+    background-color: #4e4981;
+    color: white;
+    text-decoration: none; }
+
+.card-link {
+  color: #333056; }
+  .card-link:hover {
+    color: #aa226c; }
+
+.card {
+  border-color: rgba(165, 161, 229, 0.44);
+  display: block; }
+
+.card-link-wrap {
+  height: 100%; }
+
+.parallax-window {
+  min-height: 400px;
+  background: none; }
+
+.parallax-text {
+  background: rgba(255, 255, 255, 0.6);
+  color: #4e4981; }
+
+.ph-folder-icon img, .ph-icon-img {
+  cursor: pointer; }
+
+#photoGalleryCarousel {
+  display: none; }
+  #photoGalleryCarousel .carousel-inner {
+    position: fixed;
+    top: 0;
+    z-index: 100; }
+  #photoGalleryCarousel .carousel-item {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important; }
+  #photoGalleryCarousel .slideshow-img {
+    cursor: pointer; }
+  #photoGalleryCarousel .close-slideshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.35); }
+
+.ph-folder-icon:hover .img-mask {
+  display: block; }
+
+.img-mask {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  cursor: pointer; }
+
+.img-mask-icon {
+  display: block;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.review-links .review-icon-link {
+  font-size: 4rem;
+  color: inherit; }
+  .review-links .review-icon-link :hover {
+    color: #aa226c; }
+
+.review-nav-item a.review-nav-tab.active {
+  color: #333056;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: none; }
+.review-nav-item a.review-nav-tab {
+  color: #333056;
+  font-size: 1.5rem;
+  background: none; }
+
+.nav-pills a.review-nav-tab.active {
+  background: rgba(165, 161, 229, 0.44); }
+
+button.form-submit-button {
+  background-color: rgba(165, 161, 229, 0.44);
+  color: #333056; }
+  button.form-submit-button :hover {
+    color: #aa226c; }
+
+.aboutSlideShow p {
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    .aboutSlideShow p {
+      line-height: 1.5; } }
+
+.contact-icon {
+  font-size: 10rem; }
+
+.contact-icon-link {
+  color: #333056;
+  margin-right: 0.5rem;
+  font-size: 2.5rem; }
+  .contact-icon-link :hover {
+    color: #aa226c; }
+
+#contactForm {
+  font-size: 1.35rem; }
+
+/*# sourceMappingURL=styles.css.map */

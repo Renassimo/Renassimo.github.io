@@ -1,0 +1,75 @@
+body
+{
+    background: linear-gradient(to bottom, white 70%, cornflowerblue 100%) no-repeat;
+}
+table
+{
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
+thead
+{
+    font-weight: bold;
+    text-align: center;
+}
+tr:nth-of-type(even)
+{
+    background-color: #cccccc;
+}
+tr:nth-of-type(odd)
+{
+    background-color: #ddebf7;
+}
+p:nth-last-of-type(1)
+{
+    font-size: 25px;
+}
+thead tr:nth-of-type(1)
+{
+    background-color: #cccccc;
+}
+img {
+    height: 75px;
+}
+.pic
+{
+    width: 9%;
+    font-size: smaller;
+}
+thead tr td.pic
+{
+    font-size: inherit;
+}
+.num {
+    width: 4%;
+    font-weight: bold;
+}
+.date {
+    width: 6%;
+}
+.airct {
+    width: 16%;
+}
+.dest, .orig {
+    width: 8%;
+}
+.st {
+    width: 4%;
+}
+.cn {
+    width: 6%;
+}
+.fnum {
+    width: 10%;
+}
+.reg {
+    width: 9%;
+}
+article {
+    width: 100%;
+}
+.airln
+{
+    width: 20%;
+}

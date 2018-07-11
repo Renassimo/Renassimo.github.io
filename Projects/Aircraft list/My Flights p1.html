@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flights</title>
+    <link rel="stylesheet" type="text/css" href="My%20Flights.css"/>
+    <meta charset="utf-8"/>
+
+    <!--jQuery script-->
+    <script src="../../Libs/jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div>
+    <article>
+<table border="1">
+    <thead>
+    <tr>
+        <td class="num">Num</td>
+        <td class="date">Date</td>
+        <td class="airln">Airline</td>
+        <td class="airct">Aircraft</td>
+        <td class="fnum">Flight<br>number</td>
+        <td class="orig">Origin</td>
+        <td class="dest">Destination</td>
+        <td class="st">Seat</td>
+        <td class="reg">Aircraft<br/>registration</td>
+        <td class="cn">c/n</td>
+        <td class="pic">Picture,<br/>Name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>28 May<br/>2002</td>
+        <td>AJT Air International</td>
+        <td>Ilyushin Il-86</td>
+        <td>-</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Анталья">AYT</td>
+        <td>- I</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://russianplanes.net/images/to181000/180554.jpg"
+               target="_blank">
+            <img src="https://russianplanes.net/images/to181000/180554.jpg"
+                 alt="IL86"/> </a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>June<br/>2002</td>
+        <td>AJT Air International</td>
+        <td>Ilyushin Il-86</td>
+        <td>-</td>
+        <td title="Анталья">AYT</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td>- I</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://russianplanes.net/images/to53000/052951.jpg"
+               target="_blank">
+            <img src="https://russianplanes.net/images/to53000/052951.jpg"
+                alt="IL86"/> </a> </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>16 Feb.<br/>2014</td>
+        <td>S7 Airlines</td>
+        <td>Airbus A321</td>
+        <td>S7 1005</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td title="Сочи">AER</td>
+        <td>8F</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/689000/original/vq-bqi-s7-siberia-airlines-airbus-a321-211_PlanespottersNet_689135.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/689000/original/vq-bqi-s7-siberia-airlines-airbus-a321-211_PlanespottersNet_689135.jpg"
+                alt="A321"/> </a> </td>
+    </tr>
+    <tr>
+       <td>4</td>
+       <td>26 Feb.<br/>2014</td>
+       <td>S7 Airlines<br>(Globus)</td>
+       <td>Boeing 737-800</td>
+       <td>S7 1024</td>
+       <td title="Сочи">AER</td>
+       <td title="Москва, Домодедово">DME</td>
+       <td>- A</td>
+       <td>-</td>
+       <td>-</td>
+       <td class="pic"><a href="https://img.planespotters.net/photo/354000/original/vp-bqd-s7-siberia-airlines-boeing-737-83nwl_PlanespottersNet_354957.jpg"
+              target="_blank">
+           <img src="https://img.planespotters.net/photo/354000/original/vp-bqd-s7-siberia-airlines-boeing-737-83nwl_PlanespottersNet_354957.jpg"
+               alt="737-800"/></a></td>
+    </tr>
+    <tr>
+       <td>5</td>
+       <td>15 March<br/>2014</td>
+       <td>Aeroflot Russian Airlines</td>
+       <td>Airbus A321</td>
+       <td>SU 1251</td>
+       <td title="Набережные Челны, Бегишево">NBC</td>
+       <td title="Москва, Шереметьево">SVO</td>
+       <td>-</td>
+       <td><a href="https://www.planespotters.net/airframe/Airbus/A321/2957" target="_blank">VP-BQX</a></td>
+       <td>2957</td>
+       <td class="pic"><a href="https://img.planespotters.net/photo/267000/original/vp-bqx-aeroflot-russian-airlines-airbus-a321-211_PlanespottersNet_267368.jpg"
+              target="_blank">
+           <img src="https://img.planespotters.net/photo/267000/original/vp-bqx-aeroflot-russian-airlines-airbus-a321-211_PlanespottersNet_267368.jpg"
+                alt="A321"/></a><br/>I. Ayvazovsky</td>
+    </tr>
+    <tr>
+       <td>6</td>
+       <td>15 March<br/>2014</td>
+       <td>Aeroflot Russian Airlines</td>
+       <td>Airbus A320</td>
+       <td>SU 2452</td>
+       <td title="Москва, Шереметьево">SVO</td>
+       <td title="Париж, Шарль-Де-Голль">CDG</td>
+       <td>20F</td>
+       <td>-</td>
+       <td>-</td>
+       <td class="pic"><a href="https://img.planespotters.net/photo/121000/original/vp-brx-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_121025.jpg"
+              target="_blank">
+           <img src="https://img.planespotters.net/photo/121000/original/vp-brx-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_121025.jpg"
+                alt="A320"/></a></td>
+    </tr>
+    <tr>
+       <td>7</td>
+       <td>22 March<br/>2014</td>
+       <td>Aeroflot Russian Airlines</td>
+       <td>Airbus A320</td>
+       <td>SU 2461</td>
+       <td title="Париж, Шарль-Де-Голль">CDG</td>
+       <td title="Москва, Шереметьево">SVO</td>
+       <td>11F</td>
+       <td>-</td>
+       <td>-</td>
+       <td class="pic"><a href="https://img.planespotters.net/photo/401000/original/vq-baz-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_401111.jpg"
+              target="_blank">
+           <img src="https://img.planespotters.net/photo/401000/original/vq-baz-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_401111.jpg"
+                alt="A320"/></a></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>23 March<br/>2014</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Airbus A320</td>
+        <td>SU 1254</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Набережные Челны, Бегишево">NBC</td>
+        <td>7A</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A320/3052" target="_blank">VP-BRY</a></td>
+        <td>3052</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/372000/original/vp-bry-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_372545.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/372000/original/vp-bry-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_372545.jpg"
+                 alt=""/></a><br/>K. Brulloff
+        </td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>27 Sept.<br/>2014</td>
+        <td>S7 Airlines</td>
+        <td>Airbus A319</td>
+        <td>S7 066</td>
+        <td title="Казань">KZN</td>
+        <td title="Москва, Домодедово">DME</td>
+        <td>-</td>
+        <td><a href="https://www.planespotters.net/airframe/Airbus/A319/1078" target="_blank">VP-BTV</a></td>
+        <td>1078</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/313000/original/vp-btv-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_313223.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/313000/original/vp-btv-s7-siberia-airlines-airbus-a319-114_PlanespottersNet_313223.jpg"
+                 alt="A319"/></a></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>28 Sept.<br/>2014</td>
+        <td>Aeroflot Russian Airlines</td>
+        <td>Airbus A320</td>
+        <td>SU 1190</td>
+        <td title="Москва, Шереметьево">SVO</td>
+        <td title="Казань">KZN</td>
+        <td>- A</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/471000/original/vp-bqv-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_471753.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/471000/original/vp-bqv-aeroflot-russian-airlines-airbus-a320-214_PlanespottersNet_471753.jpg"
+                 alt="A320"/></a>
+        </td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>28 March<br/>2015</td>
+        <td>Turkish Airlines</td>
+        <td>Boeing 737-700</td>
+        <td>TK 0428</td>
+        <td title="Казань">KZN</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td>7F</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/487000/original/tc-jkj-turkish-airlines-boeing-737-752wl_PlanespottersNet_487267.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/487000/original/tc-jkj-turkish-airlines-boeing-737-752wl_PlanespottersNet_487267.jpg"
+                 alt="737-700"/></a>
+        </td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>5 April<br/>2015</td>
+        <td>Turkish Airlines</td>
+        <td>Boeing 737-700</td>
+        <td>TK 0427</td>
+        <td title="Стамбул, им. Ататюрка">IST</td>
+        <td title="Казань">KZN</td>
+        <td>9F</td>
+        <td>-</td>
+        <td>-</td>
+        <td class="pic"><a href="https://img.planespotters.net/photo/207000/original/tc-jkk-turkish-airlines-boeing-737-752wl_PlanespottersNet_207738.jpg"
+               target="_blank">
+            <img src="https://img.planespotters.net/photo/207000/original/tc-jkk-turkish-airlines-boeing-737-752wl_PlanespottersNet_207738.jpg"
+                alt="737-700"/></a>
+        </td>
+    </tr>
+    </tbody>
+</table><br/>
+    </article>
+</div>
+<p align="right" >Pages: <a href="My%20Flights%20p1.html">1</a>
+    <a href="My%20Flights%20p2.html">2</a>
+    <a href="My%20Flights%20p3.html">3</a>
+    <a href="My%20Flights%20p4.html">4</a>
+</p>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var planes = [];
+
+        var $row = $('tbody tr');
+        $row.each(function () {
+            var $self = $(this).children('td');
+
+            var number = $self.eq(0).html();
+            var date = $self.eq(1).html();
+            var airline = $self.eq(2).html();
+            var aircraft = $self.eq(3).html();
+            var flightNumber = $self.eq(4).html();
+            var origin = $self.eq(5).html();
+            var originTitle = $self.eq(5).attr('title');
+            var destination = $self.eq(6).html();
+            var destinationTitle = $self.eq(6).attr('title');
+            var seat = $self.eq(7).html();
+            var aircraftReg = $self.eq(8).children('a').html();
+            var aircraftRegHref = $self.eq(8).children('a').attr('href');
+            var cn = $self.eq(9).html();
+            var picHref = $self.eq(10).children('a').attr('href');
+
+            var plane = {
+                number: number,
+                date: date,
+                airline: airline,
+                aircraft: aircraft,
+                flightNumber: flightNumber,
+                origin: origin,
+                originTitle: originTitle,
+                destination: destination,
+                destinationTitle: destinationTitle,
+                seat: seat,
+                aircraftReg: aircraftReg,
+                aircraftRegHref: aircraftRegHref,
+                cn: cn,
+                picHref: picHref,
+                name: ''
+            };
+
+            planes.push(plane);
+        });
+
+        var jsn = JSON.stringify(planes);
+
+        console.log(jsn);
+        // document.write(planes);
+
+    });
+</script>
+<!--
+<tr>
+<td>№</td>
+<td>Date</td>
+<td>Airline</td>
+<td>Aircraft</td>
+<td>Flight number</td>
+<td>Origin</td>
+<td>Destination</td>
+<td>Seat</td>
+<td>Aircraft<br/>registration</td>
+<td>c/n</td>
+<td>Picture,<br/>Name</td>
+</tr>
+-->
+<!-- <a href="" target="_blank"><img src="" height="75" alt=""/></a> -->
+<br /><br /><br /><br />
+</body>
+</html>

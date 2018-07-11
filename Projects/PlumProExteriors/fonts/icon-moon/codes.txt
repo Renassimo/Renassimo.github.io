@@ -1,0 +1,87 @@
+HTML
+<span class="icm icm-facebook-f"></span>
+CSS
+.icm-facebook-f:before {
+  content: "\66";
+}
+HTML Entity
+&#x66;
+Charcter
+f
+
+<span class="icm icm-times"></span>
+.icm-times:before {
+  content: "\78";
+}
+&#x78;
+x
+
+<span class="icm icm-search-plus"></span>
+.icm-search-plus:before {
+  content: "\2b";
+}
+&#x2b;
++
+
+<span class="icm icm-folder-open"></span>
+.icm-folder-open:before {
+  content: "\2a";
+}
+&#x2a;
+*
+
+<span class="icm icm-envelope-open"></span>
+.icm-envelope-open:before {
+  content: "\4d";
+}
+&#x4d;
+M
+
+<span class="icm icm-houzz"></span>
+.icm-houzz:before {
+  content: "\68";
+}
+&#x68;
+h
+
+<span class="icm icm-yelp"></span>
+.icm-yelp:before {
+  content: "\79";
+}
+&#x79;
+y
+
+<span class="icm icm-google"></span>
+.icm-google:before {
+  content: "\47";
+}
+&#x47;
+G
+
+<span class="icm icm-instagram"></span>
+.icm-instagram:before {
+  content: "\69";
+}
+&#x69;
+i
+
+<span class="icm icm-envelope"></span>
+.icm-envelope:before {
+  content: "\40";
+}
+&#x40;
+@
+
+<span class="icm icm-phone"></span>
+.icm-phone:before {
+  content: "\74";
+}
+&#x74;
+t
+ 
+<span class="icm icm-plum"></span>
+.icm-plum:before {
+  content: "\6f";
+}
+&#x6f;
+o

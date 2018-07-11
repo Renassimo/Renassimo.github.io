@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+		<title>Текст по окружности | pcvector.net</title>
+		<link rel="shortcut icon" href="/favicon.ico" />	
+		<style>
+			.content{
+				margin:40px auto;
+				text-align:center;
+			}
+			span{
+				font: 32px/1.4 georgia, arial;
+				letter-spacing: 0;
+			}
+			#curved {
+			  position: absolute;
+			  left: 20%;
+			  top:10%;
+			}
+
+			#curved2 {
+			  position: absolute;
+			  left: 60%;
+			  top:50%;
+			}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.lettering.js"></script>
+		<script type="text/javascript" src="eliptext.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function () {
+			$('#curved').elipText({radius: 220});
+			$('#curved2').elipText({radius: 160, dir:-1});
+		});
+		</script>			
+	</head>
+	 
+	<body>
+
+	<div class="topHeader">
+		<a class="backArticle" href="http://pcvector.net/scripts/text_and_link_effects/409-eliptext-raspolozhenie-teksta-po-okruzhnosti.html">Назад к статье &gt;&gt;&gt;</a>
+	</div>
+
+	
+	<div class="content">
+		<span id="curved">Текст располагается по окружности</span>
+		<span id="curved2">Пример текста располагающегося по кругу</span>
+	</div>
+
+<!-- pcvector.net -->
+<script type="text/javascript" src="http://pcvector.net/templates/pcv/js/pcvector.js"></script>
+<!-- /pcvector.net -->
+	</body>
+</html>

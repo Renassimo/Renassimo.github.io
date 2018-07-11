@@ -1,0 +1,177 @@
+const suits = ['s', 'h', 'c', 'd'];
+const ranks = ['a', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'j', 'q', 'k'];
+const points = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
+var cardBack = 53; //рубашка от 53 по 65
+const cards = getCards(suits, ranks, points);
+console.log(cards);
+
+cardFace($('#cards_new, #cards_played'), cardBack);
+
+class Hand {
+    constructor ($hand) {
+        this.$hand = $hand;
+    }
+}
+
+var line_dealer = [];
+var line_player = [];
+var $playerLine = $('#player_line');
+var $dealerLine = $('#dealer_line');
+var counter_dealer = {points: 0, altPoints: 0};
+var counter_player = {points: 0, altPoints: 0};
+var $playerCounter = $('#player_counter');
+var $dealerCounter = $('#dealer_counter');
+
+hidePoints($dealerCounter);
+hidePoints($playerCounter);
+
+var shuffledPack = getShuffledPack(cards.length);
+console.log(shuffledPack);
+
+$('#btn_double').click(function () {
+    cardTransfer(shuffledPack, line_player, $playerLine, counter_player, $playerCounter);
+
+    console.log(shuffledPack);
+});
+
+$('#btn_hit').click(function () {
+    cardTransfer(shuffledPack, line_player, $playerLine, counter_player, $playerCounter);
+
+    console.log(shuffledPack);
+});
+
+$('#btn_deal').click(function () {
+    cardTransfer(shuffledPack, line_player, $playerLine, counter_player, $playerCounter);
+    cardTransfer(shuffledPack, line_dealer, $dealerLine, counter_dealer, $dealerCounter);
+    cardTransfer(shuffledPack, line_player, $playerLine, counter_player, $playerCounter);
+    cardTransfer(shuffledPack, line_dealer, $dealerLine, counter_dealer, $dealerCounter);
+
+    hideDealers2($dealerLine);
+    unHidePoints($playerCounter);
+
+    console.log(shuffledPack);
+    console.log(line_player);
+    console.log(line_dealer);
+});
+
+function hideDealers2($line) {
+    cardFace($line.children('.in_game').eq(1), cardBack);
+}
+
+function hidePoints($counter) {
+    $counter.css('visibility', 'hidden');
+}
+
+function unHidePoints($counter) {
+    $counter.css('visibility', 'visible');
+}
+
+function cardTransfer(orig, dest, $line, counter, $counter) {
+    var card = cardTransferArr(orig, dest);
+    showTransferredCard($line, card);
+    cardAddPoints(card, counter, $counter);
+}
+
+function showTransferredCard($line, card) {
+    $line.append('<div class="cards in_game" id="' + 'card' + card + '"></div>');
+    var $card = $('#card' + card);
+    cardFace($card, card);
+}
+
+function cardAddPoints(card, counter, $counter) {
+    counter.points += cards[card - 1].points;
+    counter.altPoints += cards[card - 1].altPoints;
+    showPoints(counter, $counter);
+}
+
+function showPoints(counter, $counter) {
+    var points = counter.points;
+    var altPoints = counter.altPoints;
+    var str = '';
+    if (points === altPoints) {
+        str = points;
+    } else {
+        str = points + ' / ' + altPoints;
+    }
+    $counter.children().html(str);
+}
+
+function cardTransferArr(orig, dest) {
+    var card = orig[0];
+    dest.push(card);
+    orig.shift();
+    return card;
+}
+
+function getShuffledPack(cards) {
+    var pack = [];
+    var card = getRandomInt(1, cards);
+    pack.push(card);
+    for (var i = 0; i < cards - 1; i++) {
+        card = getUnique(pack, cards);
+        pack.push(card);
+    }
+    return pack;
+}
+
+function getUnique(arr, nums) {
+    var num = getRandomInt(1, nums);
+    if (isUnique(arr, num)) {
+        return num;
+    } else {
+        return getUnique(arr, nums);
+    }
+}
+
+function isUnique(arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (num === arr[i]) return false;
+    }
+    return true;
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getCards(suits, ranks, points) {
+    var cards = [];
+    var number = 0;
+    for (var i = 0; i < suits.length; i++) {
+        for (var j = 0; j < ranks.length; j++) {
+            number++;
+            var altPoint = getAltPoint(points[j]);
+            var card = {
+                suit: suits[i],
+                rank: ranks[j],
+                points: points[j],
+                altPoints: altPoint,
+                id: suits[i] + ranks[j],
+                number: number
+            };
+            cards.push(card);
+        }
+    }
+    return cards;
+}
+
+function getAltPoint(num) {
+    if (num === 11) {
+        return 1;
+    }
+    return num;
+}
+
+function getSpriteCoordsForCard(width, height, inRow, num) {
+    var row = Math.ceil(num / inRow);
+    var place = num % inRow;
+    if (place === 0) place = inRow;
+    var xCoord = 0 - width * (place - 1);
+    var yCoord = 0 - height * (row - 1);
+    return {x: xCoord, y: yCoord};
+}
+
+function cardFace($elem, num) {
+    var coords = getSpriteCoordsForCard(131, 190, ranks.length, num);
+    $elem.css('background-position', coords.x + 'px ' + coords.y +'px');
+}
