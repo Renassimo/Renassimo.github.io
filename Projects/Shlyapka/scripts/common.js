@@ -1,3 +1,29 @@
+$.fn.extend({
+    animateCss: function(animationName, callback) {
+        var animationEnd = (function(el) {
+            var animations = {
+                animation: 'animationend',
+                OAnimation: 'oAnimationEnd',
+                MozAnimation: 'mozAnimationEnd',
+                WebkitAnimation: 'webkitAnimationEnd'
+            };
+
+            for (var t in animations) {
+                if (el.style[t] !== undefined) {
+                    return animations[t];
+                }
+            }
+        })(document.createElement('div'));
+
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+
+            if (typeof callback === 'function') callback();
+        });
+
+        return this;
+    }
+});
 class Modal {
     constructor(modalSelector,) {
         this.$modal = $(modalSelector);
@@ -70,141 +96,6 @@ class Modal {
         this.$body.addClass('modal-open').css({'margin-right': this.scrollWidth + 'px'});
         this.$navMenu.css({'left': '-' + this.scrollWidth / 2 + 'px'});
         this.activity = true;
-    }
-}
-class ModalPortfolioPreview extends Modal {
-    constructor (modalSelector, launchersSelector) {
-        super(modalSelector);
-        this.launchersSelector = launchersSelector;
-        this.$launchers = $(launchersSelector);
-        this.launchersLength = this.$launchers.length;
-        this.number = 0;
-
-    }
-    activate() {
-        this.activateStandartEvents();
-        this.openFromLauncher();
-        this.activateButtons();
-    }
-    openFromLauncher() {
-        var self = this;
-        this.$launchers.click(function () {
-            self.setSpecialContent($(this));
-            self.openAnimation();
-            location.hash = self.idSelector;
-        });
-    }
-    activateButtons() {
-        var self = this;
-        this.$btn.click(function () {
-            var $self = $(this);
-            var boolean = $self.hasClass('btn-back');
-            self.modalChanger(boolean);
-        });
-        $(window).keydown(function (e) {
-            if (e.which == 37 || e.keyCode == 37){
-                self.modalChanger(true);
-            } else if (e.which == 39 || e.keyCode == 39){
-                self.modalChanger(false);
-            } else if (e.which == 40 || e.keyCode == 40){
-                self.$modal.get(0).scrollTop += 60;
-            } else if (e.which == 38 || e.keyCode == 38){
-                self.$modal.get(0).scrollTop -= 60;
-            }
-        });
-    }
-    activateSwipe(pixels) {
-        var self = this;
-
-        self.$modalBody.on('touchstart', function (e) {
-            var shiftX = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
-            var shiftY = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
-            var zeroLeft = 0;
-            var newLeft;
-            var direction;
-
-            $(document).on('touchmove', function (e) {
-                var x = e.originalEvent.touches[0].pageX || e.originalEvent.changedTouches[0].pageX;
-                var y = e.originalEvent.touches[0].pageY || e.originalEvent.changedTouches[0].pageY;
-                direction = Math.abs(shiftX - x) >= Math.abs(shiftY - y);
-
-                if (direction) {
-                    newLeft = x - shiftX;
-                    self.$modalBody.css('left', newLeft + 'px');
-                }
-            }).on('touchend', function () {
-                if (direction) {
-                    if (newLeft > pixels) {
-                        self.modalChanger(true);
-                    } else if (newLeft < -pixels) {
-                        self.modalChanger(false);
-                    } else {
-                        self.$modalBody.css('left', zeroLeft + 'px');
-                    }
-                } else {
-                    self.$modalBody.css('left', zeroLeft + 'px');
-                }
-                $(this).off('touchmove touchend');
-            });
-        }).on('dragstart', function() {return false;});
-    }
-    modalChanger(boolean) {
-        var self = this;
-        var anim = 'fade';
-        var animOut, animIn;
-
-        var num = self.number;
-
-        if (boolean) {
-            num--;
-            animOut = anim + 'OutRight';
-            animIn = anim + 'InLeft';
-            if (num <= 0) {
-                num = self.launchersLength;
-            }
-        } else if (!boolean) {
-            num++;
-            animOut = anim + 'OutLeft';
-            animIn = anim + 'InRight';
-            if (num >= self.launchersLength + 1) {
-                num = 1;
-            }
-        }
-        if (num < 1 || num > self.launchersLength) {
-            return false;
-        }
-        self.$modalBody.animateCss(animOut, function () {
-            self.setSpecialContent(self.$launchers.filter(self.launchersSelector + '[data-number="' + num + '"]'));
-            self.$modalBody.css('left', '0').animateCss(animIn);
-        });
-    }
-    setSpecialContent($launcher) {
-
-        var img = $launcher.attr('data-img');
-        var category = $launcher.attr('data-category');
-        var linkInner = $launcher.attr('data-link-inner');
-        var name = $launcher.attr('data-name');
-        var caption = $launcher.attr('data-caption');
-        var text = $launcher.attr('data-text');
-        var linkOuter = $launcher.attr('data-link-outer');
-        var linkOuterName = $launcher.attr('data-link-outer-name');
-        var date = $launcher.attr('data-date');
-        var number = $launcher.attr('data-number');
-
-        var content = '<img src="' + img + '">' +
-            '<div class="modal-content-custom">' +
-            '<h6>' + category + '</h6>' +
-            '<a class="title-link link link-inner" href="' + linkInner + '">' +
-            '<h4>' + name + '</h4></a>' +
-            '<h5>' + caption + '</h5>' +
-            '<div class="text">' + text + '</div>' +
-            '<a class="link td-none link-outer" target="_blank" href="' + linkOuter + '">' + linkOuterName + '</a>' +
-            '<div class="modal-footer"><span class="time">' + date + '</span>' +
-            '<a class="link link-inner" href="' + linkInner + '">Подробнее</a></div></div>';
-
-        this.$modalBody.attr('data-number', number);
-        this.number = number;
-        this.setContent(content);
     }
 }
 class ModalSlider extends Modal {
@@ -362,6 +253,7 @@ class ModalSliderPhoto extends ModalSlider {
 class ModalSliderContent extends ModalSlider {
     constructor (modalSelector, launchersSelector) {
         super(modalSelector, launchersSelector);
+        this.$subLauncher = this.$launchers.find('li');
     }
     activate() {
         this.activateStandartEvents();
@@ -384,38 +276,7 @@ class ModalSliderContent extends ModalSlider {
         this.$modalBody.attr('data-number', number);
         this.number = number;
         this.setContent(content);
-        // this.setImg();
     }
-    // setImg() {
-    //     var img = this.$modalContentContainer.find('img');
-    //
-    //
-    //     setImgSize(img);
-    //     $(window).resize( setCarItem ); // обновляем при изменении размеров окна
-    //
-    //
-    //     //настраивает размер изображения
-    //     function setImgSize(img) {
-    //         var ww = window.innerWidth;
-    //         var wh = $(window).height();
-    //         var kW = +ww / +wh;
-    //         var kI = +img.get(0).naturalWidth / +img.get(0).naturalHeight;
-    //         if (kI > kW) {
-    //             img.css({
-    //                 width: '100%',
-    //                 height: 'auto'
-    //             });
-    //         } else if (kI <= kW) {
-    //             img.css({
-    //                 width: 'auto',
-    //                 height: '80vh'
-    //             });
-    //         }
-    //     }
-    //     function setCarItem() {
-    //         setImgSize(img);
-    //     }
-    // }
 }
 class Menu {
     constructor(selector) {
@@ -580,14 +441,6 @@ class LineCarousel {
     }
 }
 
-class ScrolledChanger {
-    constructor (elemSelector, relatedElemSelector, needContainer) {
-        this.$elem = $(elemSelector);
-        this.$relatedElem = $(relatedElemSelector);
-        this.cont = needContainer;
-    }
-}
-
 if (location.hash) {
     var reg = new RegExp(location.hash, 'gi');
     var url = location.href.replace(reg, '');
@@ -606,39 +459,9 @@ modalLineCarousel.activate();
 modalLineCarousel.activateSwipe(60);
 modalAssort.activate();
 modalAssort.activateSwipe(60);
-topNavMenu.activate();
-topNavMenu.test();
+// topNavMenu.activate();
+// topNavMenu.test();
 
 
 var scrlBtn = new ScrollButton('.scrollButton', 300);
 scrlBtn.activate();
-
-
-
-/*
-
-//настраивает размер изображения
-function setImgSize(img) {
-    var ww = window.innerWidth;
-    var wh = $(window).height();
-    var kW = +ww / +wh;
-    var kI = +img.get(0).naturalWidth / +img.get(0).naturalHeight;
-    if (kI > kW) {
-        img.css({
-            width: ww,
-            height: 'auto'
-        });
-    } else if (kI <= kW) {
-        img.css({
-            width: 'auto',
-            height: wh
-        });
-    }
-}
-
-setImgSize(img);
-$(window).resize( setCarItem ); // обновляем при изменении размеров окна
-
-function setCarItem() {
-    setImgSize(img);
-}*/

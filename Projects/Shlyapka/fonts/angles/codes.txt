@@ -1,0 +1,21 @@
+<span class="icm icm-angle-left"></span>
+
+.icm-angle-left:before {
+  content: "\3c";
+}
+
+&#x3c;
+
+<
+
+
+
+<span class="icm icm-angle-up"></span>
+
+.icm-angle-up:before {
+  content: "\76";
+}
+
+&#x76;
+
+v

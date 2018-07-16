@@ -1,0 +1,117 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M63.4 478l272-272c18.8-18.8 49.2-18.8 67.8 0l45.2 45.2c18.8 18.8 18.8 49.2 0 67.8l-192.6 193 192.8 192.8c18.8 18.8 18.8 49.2 0 67.8l-45.2 45.4c-18.8 18.8-49.2 18.8-67.8 0l-272-272c-19-18.8-19-49.2-0.2-68z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 512,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "angle-left"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 32,
+        "id": 1,
+        "name": "angle-left",
+        "prevSize": 32,
+        "code": 60
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
+          "M354 319.4l272 272c18.8 18.8 18.8 49.2 0 67.8l-45.2 45.2c-18.8 18.8-49.2 18.8-67.8 0l-193-192.6-192.8 192.8c-18.8 18.8-49.2 18.8-67.8 0l-45.4-45.2c-18.8-18.8-18.8-49.2 0-67.8l272-272c18.8-19 49.2-19 68-0.2z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 640,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "angle-up"
+        ]
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 31,
+        "id": 0,
+        "name": "angle-up",
+        "prevSize": 32,
+        "code": 118,
+        "ligatures": ""
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 1
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "angles"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showCodes": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icm-",
+      "metadata": {
+        "fontFamily": "angles",
+        "majorVersion": 1,
+        "minorVersion": 1
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false,
+      "includeMetadata": true,
+      "cssVars": true,
+      "cssVarsFormat": "scss",
+      "showSelector": true,
+      "selector": "class",
+      "showMetrics": false,
+      "showMetadata": true,
+      "showVersion": true,
+      "autoHost": true,
+      "classSelector": ".icm",
+      "ie7": false,
+      "noie8": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showLiga": true,
+    "quickUsageToken": {
+      "Plum": "MjFjMWY2MzJhY2MzZTllZTM4MDFlZTQ1MThhYWU0MWQjMSMxNTI1MDMyMzY3IyMj"
+    },
+    "gridSize": 16
+  }
+}

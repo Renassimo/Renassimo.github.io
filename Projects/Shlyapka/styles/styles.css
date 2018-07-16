@@ -1,33 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Alegreya:400,700|Arsenal:400,700|Cormorant+Unicase:400,700|Cormorant:400,700|EB+Garamond:400,700|El+Messiri:400,700|Old+Standard+TT:400,700|Playfair+Display+SC:400,700|Vollkorn+SC:400,700|Vollkorn:400,700&subset=cyrillic");
-.font1 {
-  font-family: "Cormorant", serif; }
-
+@import url("../fonts/google/Alegreya/css.css?family=Alegreya:400,700&subset=cyrillic");
+@import url("../fonts/google/Arsenal/css.css?family=Arsenal:400,700&subset=cyrillic");
 .font2, p, .assort-launcher li {
   font-family: "Alegreya", serif; }
 
-.font3 {
-  font-family: "Vollkorn SC", serif; }
-
-.font4 {
-  font-family: "EB Garamond", serif; }
-
-.font5 {
-  font-family: "Old Standard TT", serif; }
-
-.font6 {
-  font-family: "Playfair Display SC", serif; }
-
 .font7, body, h1, h2, h3, h4, h5, h6, .developer-line p {
   font-family: "Arsenal", sans-serif; }
-
-.font8 {
-  font-family: "Vollkorn", serif; }
-
-.font9 {
-  font-family: "Cormorant Unicase", serif; }
-
-.font10 {
-  font-family: "El Messiri", sans-serif; }
 
 body {
   background-color: #fafafa;
@@ -369,8 +346,6 @@ footer {
   cursor: pointer; }
   .assort-launcher li {
     transition: background-color 150ms; }
-    .assort-launcher li:hover {
-      background-color: rgba(199, 94, 145, 0.51); }
 
 .modal {
   display: none;

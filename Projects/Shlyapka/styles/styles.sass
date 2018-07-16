@@ -1,30 +1,10 @@
-//@import "../libs/bootstrap/scss/_functions.scss"
-//@import "../libs/bootstrap/scss/_variables.scss"
-//@import "../libs/bootstrap/scss/mixins/_breakpoints.scss"
+@import url('../fonts/google/Alegreya/css.css?family=Alegreya:400,700&subset=cyrillic')
+@import url('../fonts/google/Arsenal/css.css?family=Arsenal:400,700&subset=cyrillic')
 
-//@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700|Vollkorn+SC:400,700|Yanone+Kaffeesatz:400,700&subset=cyrillic')
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Arsenal:400,700|Cormorant+Unicase:400,700|Cormorant:400,700|EB+Garamond:400,700|El+Messiri:400,700|Old+Standard+TT:400,700|Playfair+Display+SC:400,700|Vollkorn+SC:400,700|Vollkorn:400,700&subset=cyrillic')
-
-.font1
-  font-family: 'Cormorant', serif
 .font2
   font-family: 'Alegreya', serif
-.font3
-  font-family: 'Vollkorn SC', serif
-.font4
-  font-family: 'EB Garamond', serif
-.font5
-  font-family: 'Old Standard TT', serif
-.font6
-  font-family: 'Playfair Display SC', serif
 .font7
   font-family: 'Arsenal', sans-serif
-.font8
-  font-family: 'Vollkorn', serif
-.font9
-  font-family: 'Cormorant Unicase', serif
-.font10
-  font-family: 'El Messiri', sans-serif
 
 $thmColor: #c75e91
 $thmColorTp: rgba(199, 94, 145, 0.51)
@@ -55,8 +35,6 @@ body
   color: $mainColor
   &.modal-open
     overflow: hidden
-
-
 
 $baseFS: 1.2rem
 
@@ -232,11 +210,6 @@ a
   top: 0
   left: 0
   transition: background-color $nvSpd
-  //background-color: $bgColorTp
-  //background-color: #dcdddd
-  //background: linear-gradient(to bottom, rgba(215, 215, 215, 0.6), rgba(235, 235, 235, 0.6))
-  //&.hovered
-    background-color: $bgColorTp
   a
     text-decoration: none
 .top-nav-menu-container
@@ -328,7 +301,6 @@ a
   background-size: cover !important
 
 footer
-  //background-color: $thmColor
   background: linear-gradient(to bottom, rgba(215, 215, 215, 0.6), rgba(235, 235, 235, 0.6))
   a
     color: $mainColor
@@ -368,12 +340,9 @@ $wh: 250px
   position: relative
   .carousel-wrapper
     position: relative
-    //left: -100px
     transition: left $nvSpd * 1.3
     font-size: 0
     width: auto
-    //display: flex
-    //overflow: hidden
     white-space: nowrap
     .line-carousel-item
       height: $wh
@@ -388,7 +357,6 @@ $wh: 250px
         box-shadow: 0px 0px 41px -5px white inset
   .btn
     position: absolute
-    //background-color: $thmColorTp
     height: 100%
     top: 0
     display: flex
@@ -421,7 +389,7 @@ $wh: 250px
   li
     @extend .font2
     transition: background-color $nvSpd
-    &:hover
+    //&:hover
       background-color: $thmColorTp
 
 .modal
@@ -478,7 +446,6 @@ $wh: 250px
       background-color: $bgColor
     .modal-content-custom
       padding: 1.5rem
-      //color: $mainColor
       h6
         margin-bottom: 0.5rem
         font-size: 0.9rem
