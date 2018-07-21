@@ -334,7 +334,7 @@ class Menu {
     activate() {
         this.activateToggler();
         this.activateBodyOff();
-        this.brandLogoAnimation();
+        // this.brandLogoAnimation();
         this.smartHover();
     }
     smartHover() {
@@ -350,13 +350,36 @@ class Menu {
 
     }
 }
-class ScrollButton {
+class Anchor {
     constructor(selector, duration) {
         this.selector = selector;
         this.$btn = $(selector);
-        this.height = $(window).height();
-        this.y = 0;
         this.duration = duration;
+    }
+    activate() {
+        this.btnEvents(this.duration);
+    }
+    btnEvents(duration) {
+        this.$btn.click(function () {
+            var sc = $(this).attr("href");
+            var dn = 0;
+            if (sc != '#') dn = $(sc).offset().top;
+            // * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+            // * dn - определяем положение блока на странице
+
+            $('html, body').animate({scrollTop: dn}, duration);
+            //duration скорость перехода в миллисекундах
+
+            return false;
+            // отменяем стандартное действие
+        });
+    }
+}
+class ScrollButton extends Anchor {
+    constructor(selector, duration) {
+        super(selector, duration);
+        // this.height = $(window).height();
+        // this.y = 0;
     }
     activate() {
         this.conditions();
@@ -378,29 +401,6 @@ class ScrollButton {
                 $btn.removeClass('active');
             });
         }
-    }
-    btnEvents(duration) {
-        var step = 10;
-        var steps = duration / step;
-        var $btn = this.$btn;
-        $btn.click(function () {
-            var distance = window.pageYOffset;
-            var speed = distance / steps;
-
-            start();
-            function start() {
-                window.timerId = window.setInterval(scroller, step);
-            }
-            function stop() {
-                window.clearInterval(window.timerId);
-            }
-            function scroller() {
-                if (window.pageYOffset == 0) {
-                    stop();
-                }
-                window.scrollBy(0, -speed);
-            }
-        });
     }
 }
 class LineCarousel {
@@ -459,9 +459,13 @@ modalLineCarousel.activate();
 modalLineCarousel.activateSwipe(60);
 modalAssort.activate();
 modalAssort.activateSwipe(60);
-// topNavMenu.activate();
+topNavMenu.activate();
 // topNavMenu.test();
 
 
 var scrlBtn = new ScrollButton('.scrollButton', 300);
 scrlBtn.activate();
+
+var anchor = new Anchor('.anchor-link', 300);
+anchor.activate();
+
