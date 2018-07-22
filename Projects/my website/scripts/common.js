@@ -25,6 +25,8 @@ class Modal {
             self.$modal.removeClass('active');
             self.$body.removeClass('modal-open').css({'margin-right': 0});
             self.$navMenu.css({'left': 0});
+            // console.log('M-cl');
+            self.activity = false;
         });
     }
     closeModal() {
@@ -69,7 +71,8 @@ class Modal {
         });
         this.$body.addClass('modal-open').css({'margin-right': this.scrollWidth + 'px'});
         this.$navMenu.css({'left': '-' + this.scrollWidth / 2 + 'px'});
-        this.activity = true;
+        self.activity = true;
+        // console.log('M-op');
     }
 }
 class ModalPortfolioPreview extends Modal {
@@ -79,7 +82,6 @@ class ModalPortfolioPreview extends Modal {
         this.$launchers = $(launchersSelector);
         this.launchersLength = this.$launchers.length;
         this.number = 0;
-
     }
     activate() {
         this.activateStandartEvents();
@@ -153,30 +155,42 @@ class ModalPortfolioPreview extends Modal {
         var anim = 'fade';
         var animOut, animIn;
 
-        var num = self.number;
+        var num = this.number;
 
         if (boolean) {
             num--;
             animOut = anim + 'OutRight';
             animIn = anim + 'InLeft';
             if (num <= 0) {
-                num = self.launchersLength;
+                num = this.launchersLength;
             }
         } else if (!boolean) {
             num++;
             animOut = anim + 'OutLeft';
             animIn = anim + 'InRight';
-            if (num >= self.launchersLength + 1) {
+            if (num >= this.launchersLength + 1) {
                 num = 1;
             }
         }
-        if (num < 1 || num > self.launchersLength) {
+        if (num < 1 || num > this.launchersLength) {
             return false;
         }
-        self.$modalBody.animateCss(animOut, function () {
+
+        if (this.checkForHiddenLauncher(num)) {
+            this.number = num;
+            this.modalChanger(boolean);
+            return false;
+        }
+
+        this.$modalBody.animateCss(animOut, function () {
             self.setSpecialContent(self.$launchers.filter(self.launchersSelector + '[data-number="' + num + '"]'));
             self.$modalBody.css('left', '0').animateCss(animIn);
         });
+    }
+    checkForHiddenLauncher(num) {
+        var display = this.$launchers.filter(this.launchersSelector + '[data-number="' + num + '"]').css('display');
+        // console.log(display);
+        return display === 'none';
     }
     setSpecialContent($launcher) {
 
@@ -205,6 +219,53 @@ class ModalPortfolioPreview extends Modal {
         this.$modalBody.attr('data-number', number);
         this.number = number;
         this.setContent(content);
+    }
+}
+class ModalPhotoViewer extends ModalPortfolioPreview {
+    constructor(modalSelector, launchersSelector) {
+        super(modalSelector, launchersSelector);
+    }
+    activate() {
+        this.activateStandartEvents();
+        this.openFromLauncher();
+        this.activateButtons();
+        // this.fixScreenToMiddle();
+    }
+    fixScreenToMiddle() {
+        var self = this;
+        // self.setMiddle();
+
+        $(window).resize( setItem ); // обновляем при изменении размеров окна
+
+        function setItem() {
+            self.setMiddle();
+        }
+    }
+    setMiddle() {
+        var self = this;
+        if ($(window).height() > /*$('#inModalImg').height()*/ self.$modalBodyContainer.innerHeight()) {
+            self.$modal.addClass('centered');
+            // console.log('cent');
+        } else {
+            self.$modal.removeClass('centered');
+            // console.log('UNcent');
+        }
+    }
+    setSpecialContent($launcher) {
+        var self = this;
+
+        var img = $launcher.attr('data-img');
+        var number = $launcher.attr('data-number');
+
+        var content = '<img id="inModalImg" src="' + img + '">';
+
+        this.$modalBody.attr('data-number', number);
+        this.number = number;
+        this.setContent(content);
+        // self.setMiddle();
+/*        $('#inModalImg').on('load', function (e) {
+            self.setMiddle();
+        });*/
     }
 }
 class Menu {
@@ -332,6 +393,20 @@ class ScrollButton {
         });
     }
 }
+class SwitchingButtons {
+    constructor(containerSelector, buttonSelector) {
+        this.containerSelector = containerSelector;
+        this.container = $(containerSelector);
+        this.buttons = this.container.find(buttonSelector);
+    }
+    activate() {
+        var self = this;
+        this.buttons.click(function () {
+           self.buttons.removeClass('active');
+           $(this).addClass('active');
+        });
+    }
+}
 
 if (location.hash) {
     var reg = new RegExp(location.hash, 'gi');
@@ -339,15 +414,25 @@ if (location.hash) {
     history.replaceState('', null, url);
 }
 
-
 var $body = $('body');
-var modalPortfolioPreview = new ModalPortfolioPreview('.modal', '.portfolio-preview-thumbnail');
+var modalPortfolioPreview = new ModalPortfolioPreview('#modalPortfolioPreview', '.portfolio-preview .portfolio-preview-thumbnail');
+var modalPortfolioPreviewPage = new ModalPortfolioPreview('#modalPortfolioPreviewOnPage', '.page-portfolio-preview .portfolio-preview-thumbnail.mix');
+var modalPhotoViewer = new ModalPhotoViewer('#modalPhotoViewer', '.page-portfolio-preview .portfolio-preview-thumbnail.ph-viewer');
 var topNavMenu = new Menu('.top-nav-menu');
+var portfolioSwitchers = new SwitchingButtons('.buttons-portfolio', '.button');
 
 modalPortfolioPreview.activate();
 modalPortfolioPreview.activateSwipe(60);
+
+modalPortfolioPreviewPage.activate();
+modalPortfolioPreviewPage.activateSwipe(60);
+
+modalPhotoViewer.activate();
+modalPhotoViewer.activateSwipe(60);
+
 topNavMenu.activate();
 topNavMenu.test();
+portfolioSwitchers.activate();
 
 $('.testimonial-preview p').each(function () {
    var $self = $(this);
@@ -398,7 +483,7 @@ function validateForm($form) {
                 check($(this));
             }
         });
-        console.log(valids);
+        // console.log(valids);
         if (!checkValids()) {
             return false;
         }
