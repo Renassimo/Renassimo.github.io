@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Renas.pro</title>
+    <title>Renas.pro - main</title>
     <!--Reset CSS-->
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <!--Custom Styles-->
@@ -17,19 +17,19 @@
 <body>
 
 <nav class="top-nav-menu">
-    <div class="container top-nav-menu-container">
+    <div class="container">
         <div class="nav-menu">
             <div class="brand-logo">
-                <a class="brand-link" href="#">Renas.pro</a>
+                <a class="brand-link" href="index.html">Renas.pro</a>
             </div>
             <div class="nav-menu-list">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Связаться</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="testimonials.html">Отзывы</a></li>
+                    <li><a href="#contact">Связаться</a></li>
                 </ul>
             </div>
         </div>
@@ -48,15 +48,15 @@
     </div>
 </section>
 <section class="portfolio-preview">
-    <div class="container portfolio-preview-container">
-        <div class="portfolio-preview-title section-title">
+    <div class="container">
+        <div class="title section-title">
             <h3>Последние работы</h3>
         </div>
-        <div class="portfolio-preview-thumbnail"
+        <div class="portfolio-preview-thumbnail thumbnail"
              data-number="1"
              data-category="Вебсайт на Wordpress"
              data-name="Plumproexteriors"
-             data-link-inner="#"
+             data-link-inner="portfolio_work.html"
              data-link-outer="http://plumproexteriors.com"
              data-link-outer-name="plumproexteriors.com"
              data-caption="Создание сайта под ключ с нуля"
@@ -74,10 +74,10 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-            <div class="portfolio-preview-thumbnail-mask"
+            <div class="mask"
                  style="background-image: url('images/portfolio/plumproexteriors/plumproexteriors.jpg')"></div>
         </div>
-        <div class="portfolio-preview-thumbnail"
+        <div class="portfolio-preview-thumbnail thumbnail"
              data-number="2"
              data-category="Игры"
              data-name="Блэкджек"
@@ -93,10 +93,10 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-            <div class="portfolio-preview-thumbnail-mask"
+            <div class="mask"
                  style="background-image: url('images/portfolio/blackjack/bj.jpg')"></div>
         </div>
-        <div class="portfolio-preview-thumbnail"
+        <div class="portfolio-preview-thumbnail thumbnail"
              data-number="3"
              data-category="Шаблоны сайтов"
              data-name="Officetime"
@@ -115,10 +115,10 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-            <div class="portfolio-preview-thumbnail-mask"
+            <div class="mask"
                  style="background-image: url('images/portfolio/templates/officetime.jpg')"></div>
         </div>
-        <div class="portfolio-preview-thumbnail"
+        <div class="portfolio-preview-thumbnail thumbnail"
              data-number="4"
              data-category="Сайт портфолио"
              data-name="Renassimo"
@@ -146,10 +146,10 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-            <div class="portfolio-preview-thumbnail-mask"
+            <div class="mask"
                  style="background-image: url('images/portfolio/templates/renassimo.jpg')"></div>
         </div>
-        <div class="portfolio-preview-thumbnail"
+        <div class="portfolio-preview-thumbnail thumbnail"
              data-number="5"
              data-name="Название работы"
              data-caption="Краткая суть работы"
@@ -162,65 +162,67 @@
              data-text="<p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-            <div class="portfolio-preview-thumbnail-mask"
+            <div class="mask"
                  style="background-image: url('images/portfolio/templates/aircraftlist.jpg')"></div>
         </div>
-        <div class="portfolio-preview-more link-more">
+        <div class="more link-more">
             <a class="link" href="#">Больше работ</a>
         </div>
     </div>
 </section>
 <section class="services-preview">
-    <div class="container services-preview-container">
-        <div class="section-title services-preview-title">
+    <div class="container">
+        <div class="section-title title">
             <h3>Услуги</h3>
         </div>
-        <div class="services-preview-block" data-number="1">
-            <div class="services-preview-thumbnail"><i class="fas fa-desktop"></i><i class="fas fa-mobile-alt half-size"></i></div>
-            <div class="services-preview-content">
-                <h5>Разработка сайта</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    quis quos reiciendis sint vero.</p>
+        <div class="blocks">
+            <div class="block" data-number="1">
+                <div class="services-preview-thumbnail"><i class="fas fa-desktop"></i><i class="fas fa-mobile-alt half-size"></i></div>
+                <div class="content">
+                    <h5>Разработка сайта</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
+                        quis quos reiciendis sint vero.</p>
+                </div>
+            </div>
+            <div class="block" data-number="2">
+                <div class="services-preview-thumbnail"><i class="far fa-edit"></i></div>
+                <div class="content">
+                    <h5>Доработка сайта</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
+                        ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
+                        quis quos reiciendis sint vero.</p>
+                </div>
+            </div>
+            <div class="block" data-number="3">
+                <div class="services-preview-thumbnail"><i class="far fa-calendar-check"></i></div>
+                <div class="content">
+                    <h5>Поддержка сайта</h5>
+                    <p>Lorem ipsum dolor sit amet. Aliquid amet atque
+                        ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
+                        quis quos reiciendis sint vero.</p>
+                </div>
             </div>
         </div>
-        <div class="services-preview-block" data-number="2">
-            <div class="services-preview-thumbnail"><i class="far fa-edit"></i></div>
-            <div class="services-preview-content">
-                <h5>Доработка сайта</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
-                    quis quos reiciendis sint vero.</p>
-            </div>
-        </div>
-        <div class="services-preview-block" data-number="3">
-            <div class="services-preview-thumbnail"><i class="far fa-calendar-check"></i></div>
-            <div class="services-preview-content">
-                <h5>Поддержка сайта</h5>
-                <p>Lorem ipsum dolor sit amet. Aliquid amet atque
-                    ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
-                    quis quos reiciendis sint vero.</p>
-            </div>
-        </div>
-        <div class="services-preview-more link-more">
+        <div class="more link-more">
             <a class="link" href="#">Подробнее</a>
         </div>
     </div>
 </section>
 <section class="about-preview">
-    <div class="container about-preview-container">
-        <div class="section-title about-preview-title">
+    <div class="container">
+        <div class="section-title title">
             <h3>Обо мне</h3>
         </div>
-        <div class="about-preview-thumbnail">
+        <div class="thumbnail">
             <img src="images/greeting/me.jpeg">
         </div>
-        <div class="about-preview-content">
+        <div class="content">
             <h5>Заголовок</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                 ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                 quis quos reiciendis sint vero.</p>
         </div>
-        <div class="about-preview-more link-more">
+        <div class="more link-more">
             <a class="link" href="#">Подробнее</a>
         </div>
     </div>
@@ -228,10 +230,10 @@
 <section class="testimonials-preview">
     <div class="background" style="background-image: url('images/greeting/testimonials.jpg')"></div>
     <div class="container">
-        <div class="section-title testimonials-preview-title">
+        <div class="section-title title">
             <h3>Отзывы моих клиентов</h3>
         </div>
-        <div class="testimonials-preview-content">
+        <div class="content">
             <div class="testimonial-preview active">
                 <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum.
@@ -254,12 +256,12 @@
                 <h6>3Consectetur adipisicing elit</h6>
             </div>
         </div>
-        <div class="testimonials-preview-more link-more">
+        <div class="more link-more">
             <a class="link" href="#">Подробнее</a>
         </div>
     </div>
 </section>
-<section class="contact-preview">
+<section id="contact" class="contact-preview">
     <div class="container">
         <div class="section-title contact-preview-title">
             <h3>Связаться со мной</h3>
@@ -325,18 +327,6 @@
     <div class="modal-body-container">
         <div class="modal-body" data-number="">
             <div class="modal-content-container">
-                <img src="">
-                <div class="modal-content">
-                    <h6></h6>
-                    <a class="title-link link link-inner" href=""><h4></h4></a>
-                    <h5></h5>
-                    <div class="text"></div>
-                    <a class="link td-none link-outer" target="_blank" href=""></a>
-                    <div class="modal-footer">
-                        <span class="time"></span>
-                        <a class="link link-inner" href="">Подробнее</a>
-                    </div>
-                </div>
             </div>
             <div class="close">
                 <span class="cl-topper cl"></span>
@@ -347,103 +337,26 @@
         <div class="btn-forward btn"><i class="angle fas fa-angle-left"></i></div>
     </div>
 </div>
-<div class="scrollButton"><i class="angle fas fa-angle-up"></i></div>
+<a href="#" class="scrollButton td-none"><i class="angle fas fa-angle-up"></i></a>
 <footer class="mini-footer">
     <div class="container">
         <div class="footer-menu-list">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Связаться</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="testimonials.html">Отзывы</a></li>
+                <li><a href="#contact">Связаться</a></li>
             </ul>
         </div>
         <div class="developer-line">
             <p>
-                <span>2018 <a href="#">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
+                <span>2018 <a href="index.html">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
             </p>
         </div>
     </div>
 </footer>
-<!--<footer class="big-footer">
-    <div class="container">
-        <div class="section-title contact-preview-title">
-            <h5>Свяжитесь со мной</h5>
-        </div>
-        <div class="section-caption">
-            <p>У Вас есть какие-либо вопросы? Или Вы уже готовы заказать работу?
-                Свяжитесь со мной с представленными способами ниже:</p>
-        </div>
-        <div class="footer-menu-list">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Связаться</a></li>
-            </ul>
-        </div>
-        <div class="footer-contacts">
-            <div class="contact-line">
-                <a class="icon" href="tel:+79172657216"><i class="fas fa-phone"></i></a>
-                <span class="line">+7 (917) 265-72-16</span>
-            </div>
-            <div class="contact-line">
-                <span class="icon"><i class="fab fa-whatsapp"></i></span>
-                <span class="line">+7 (917) 265-72-16</span>
-            </div>
-            <div class="contact-line">
-                <a class="icon"  href="mailto:srr.renas@gmail.com" target="_blank"><i class="fas fa-at"></i></a>
-                <span class="line">srr.renas@gmail.com</span>
-            </div>
-            <div class="contact-line">
-                <a class="icon" href="https://t.me/RenasAkBars" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-                <span class="line">@RenasAkBars</span>
-            </div>
-            <div class="contact-line">
-                <a class="icon" href="https://www.facebook.com/srr.renas" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <span class="line">srr.renas</span>
-            </div>
-            <div class="contact-line">
-                <span class="icon"><i class="fab fa-skype"></i></span>
-                <span class="line">bezbuldyrabyz</span>
-            </div>
-            <div class="contact-line">
-                <a class="icon" href="https://vk.com/srr.renas" target="_blank"><i class="fab fa-vk"></i></a>
-                <span class="line">srr.renas</span>
-            </div>
-            <div class="contact-line">
-                <a class="icon" href="https://goo.gl/maps/xoy3q7RPntT2" target="_blank"><i class="fas fa-map-marker"></i></a>
-                <span class="line">Россия, респ. Татарстан, г. Казань</span>
-            </div>
-        </div>
-        <div class="footer-form">
-            <form id="footerContactForm" novalidate>
-                <label class="invalid-feedback" for="footerContactFormName">Напишите Ваше имя</label>
-                <input id="footerContactFormName" type="text" name="name" placeholder="Ваше имя" required>
-
-                <label class="invalid-feedback" for="footerContactFormEmail">E-mail не корректен</label>
-                <input id="footerContactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
-
-                <label class="invalid-feedback" for="footerContactFormTel">Wrong</label>
-                <input id="footerContactFormTel" type="tel" name="tel" placeholder="Телефон">
-
-                <label class="invalid-feedback" for="footerContactFormMessage">Напишете Ваше сообщение</label>
-                <textarea id="footerContactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
-
-                <button type="submit" name="btn">Отправить</button>
-            </form>
-        </div>
-        <div class="developer-line">
-            <p>
-                <span>2018 <a href="#">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
-            </p>
-        </div>
-    </div>
-</footer>-->
 
 <!--Jquery-->
 <script src="libs/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>

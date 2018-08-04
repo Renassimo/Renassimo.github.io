@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Renas.pro</title>
+    <title>Renas.pro - portfolio</title>
     <!--Reset CSS-->
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <!--Custom Styles-->
@@ -19,16 +19,16 @@
     <div class="container top-nav-menu-container">
         <div class="nav-menu">
             <div class="brand-logo">
-                <a class="brand-link" href="#">Renas.pro</a>
+                <a class="brand-link" href="index.html">Renas.pro</a>
             </div>
             <div class="nav-menu-list">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Связаться</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="testimonials.html">Отзывы</a></li>
+                    <li><a href="#contact">Связаться</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +49,7 @@
 </section>
 <section class="page-portfolio-preview">
     <div class="container">
-        <div class="portfolio-preview-title">
+        <div class="title">
             <div class="buttons-portfolio">
                 <div class="button active" type="button" data-filter="all">Все работы</div>
                 <div class="button" type="button" data-filter=".cat-wp">Сайты на Wordpress</div>
@@ -63,7 +63,7 @@
                  data-order="1"
                  data-category="Вебсайт на Wordpress"
                  data-name="Plumproexteriors"
-                 data-link-inner="#"
+                 data-link-inner="portfolio_work.html"
                  data-link-outer="http://plumproexteriors.com"
                  data-link-outer-name="plumproexteriors.com"
                  data-caption="Создание сайта под ключ с нуля"
@@ -81,7 +81,7 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/plumproexteriors/plumproexteriors.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail mix cat-game"
@@ -101,7 +101,7 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/blackjack/bj.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail mix cat-mup"
@@ -124,7 +124,7 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/officetime.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail mix cat-wp"
@@ -156,7 +156,7 @@
                 <p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/renassimo.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail mix cat-game cat-mup"
@@ -173,7 +173,7 @@
                  data-text="<p>Описание работы:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
                     ducimus earum, explicabo incidunt ipsum laborum modi nihil nisi nostrum odit pariatur qui quia
                     quis quos reiciendis sint vero.</p>">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/aircraftlist.jpg')"></div>
             </div>
         </div>
@@ -183,18 +183,6 @@
     <div class="modal-body-container">
         <div class="modal-body" data-number="">
             <div class="modal-content-container">
-                <img src="">
-                <div class="modal-content">
-                    <h6></h6>
-                    <a class="title-link link link-inner" href=""><h4></h4></a>
-                    <h5></h5>
-                    <div class="text"></div>
-                    <a class="link td-none link-outer" target="_blank" href=""></a>
-                    <div class="modal-footer">
-                        <span class="time"></span>
-                        <a class="link link-inner" href="">Подробнее</a>
-                    </div>
-                </div>
             </div>
             <div class="close">
                 <span class="cl-topper cl"></span>
@@ -205,7 +193,7 @@
         <div class="btn-forward btn"><i class="angle fas fa-angle-left"></i></div>
     </div>
 </div>
-<div class="scrollButton"><i class="angle fas fa-angle-up"></i></div>
+<a href="#" class="scrollButton td-none"><i class="angle fas fa-angle-up"></i></a>
 <footer class="big-footer">
     <div class="container">
         <div class="section-title contact-preview-title">
@@ -218,11 +206,11 @@
         <div class="footer-menu-list">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Связаться</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="testimonials.html">Отзывы</a></li>
+                <li><a href="#contact">Связаться</a></li>
             </ul>
         </div>
         <div class="footer-contacts">
@@ -259,26 +247,26 @@
                 <span class="line">Россия, респ. Татарстан, г. Казань</span>
             </div>
         </div>
-        <div class="footer-form">
-            <form id="footerContactForm" novalidate>
-                <label class="invalid-feedback" for="footerContactFormName">Напишите Ваше имя</label>
-                <input id="footerContactFormName" type="text" name="name" placeholder="Ваше имя" required>
+        <div id="contact" class="footer-form">
+            <form id="contactForm" novalidate>
+                <label class="invalid-feedback" for="contactFormName">Напишите Ваше имя</label>
+                <input id="contactFormName" type="text" name="name" placeholder="Ваше имя" required>
 
-                <label class="invalid-feedback" for="footerContactFormEmail">E-mail не корректен</label>
-                <input id="footerContactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
+                <label class="invalid-feedback" for="contactFormEmail">E-mail не корректен</label>
+                <input id="contactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
 
-                <label class="invalid-feedback" for="footerContactFormTel">Wrong</label>
-                <input id="footerContactFormTel" type="tel" name="tel" placeholder="Телефон">
+                <label class="invalid-feedback" for="contactFormTel">Wrong</label>
+                <input id="contactFormTel" type="tel" name="tel" placeholder="Телефон">
 
-                <label class="invalid-feedback" for="footerContactFormMessage">Напишете Ваше сообщение</label>
-                <textarea id="footerContactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
+                <label class="invalid-feedback" for="contactFormMessage">Напишете Ваше сообщение</label>
+                <textarea id="contactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
 
                 <button type="submit" name="btn">Отправить</button>
             </form>
         </div>
         <div class="developer-line">
             <p>
-                <span>2018 <a href="#">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
+                <span>2018 <a href="index.html">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
             </p>
         </div>
     </div>

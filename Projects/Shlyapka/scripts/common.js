@@ -313,6 +313,12 @@ class Menu {
             }
         });
     }
+    activateOff() {
+        var self = this;
+        this.$navMenuUl.find('li a').click(function () {
+            self.toggleMenu();
+        });
+    }
     brandLogoAnimation() {
         this.$brandLogo.mouseenter(function () {
             $(this).animateCss('tada');
@@ -334,8 +340,9 @@ class Menu {
     activate() {
         this.activateToggler();
         this.activateBodyOff();
+        this.activateOff();
         // this.brandLogoAnimation();
-        this.smartHover();
+        // this.smartHover();
     }
     smartHover() {
         var self = this;

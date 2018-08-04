@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Renas.pro</title>
+    <title>Renas.pro - portfolio work</title>
     <!--Reset CSS-->
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <!--Custom Styles-->
@@ -19,16 +19,16 @@
     <div class="container top-nav-menu-container">
         <div class="nav-menu">
             <div class="brand-logo">
-                <a class="brand-link" href="#">Renas.pro</a>
+                <a class="brand-link" href="index.html">Renas.pro</a>
             </div>
             <div class="nav-menu-list">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Обо мне</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Связаться</a></li>
+                    <li><a href="portfolio.html">Портфолио</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="testimonials.html">Отзывы</a></li>
+                    <li><a href="#contact">Связаться</a></li>
                 </ul>
             </div>
         </div>
@@ -84,31 +84,31 @@
             <div class="portfolio-preview-thumbnail thumbnail ph-viewer"
                  data-number="1"
                  data-img="images/portfolio/plumproexteriors/plumproexteriors.jpg">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/plumproexteriors/plumproexteriors.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail ph-viewer"
                  data-number="2"
                  data-img="images/portfolio/blackjack/bj.jpg">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/blackjack/bj.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail ph-viewer"
                  data-number="3"
                  data-img="images/portfolio/templates/officetime.jpg">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/officetime.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail ph-viewer"
                  data-number="4"
                  data-img="images/portfolio/templates/renassimo.jpg">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/renassimo.jpg')"></div>
             </div>
             <div class="portfolio-preview-thumbnail thumbnail ph-viewer"
                  data-number="5"
                  data-img="images/portfolio/03_home.jpg">
-                <div class="portfolio-preview-thumbnail-mask mask"
+                <div class="mask"
                      style="background-image: url('images/portfolio/templates/aircraftlist.jpg')"></div>
             </div>
         </div>
@@ -118,7 +118,8 @@
 <div class="portfolio-preview-modal modal" id="modalPhotoViewer">
     <div class="modal-body-container">
         <div class="modal-body" data-number="">
-            <div class="modal-content-container"><img src=""></div>
+            <div class="modal-content-container">
+            </div>
             <div class="close">
                 <span class="cl-topper cl"></span>
                 <span class="cl-footer cl"></span>
@@ -129,7 +130,7 @@
     </div>
 </div>
 
-<div class="scrollButton"><i class="angle fas fa-angle-up"></i></div>
+<a href="#" class="scrollButton td-none"><i class="angle fas fa-angle-up"></i></a>
 <footer class="big-footer">
     <div class="container">
         <div class="section-title contact-preview-title">
@@ -142,14 +143,14 @@
         <div class="footer-menu-list">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Связаться</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="testimonials.html">Отзывы</a></li>
+                <li><a href="#contact">Связаться</a></li>
             </ul>
         </div>
-        <div class="footer-contacts">
+        <div id="contact" class="footer-contacts">
             <div class="contact-line">
                 <a class="icon" href="tel:+79172657216"><i class="fas fa-phone"></i></a>
                 <span class="line">+7 (917) 265-72-16</span>
@@ -184,25 +185,25 @@
             </div>
         </div>
         <div class="footer-form">
-            <form id="footerContactForm" novalidate>
-                <label class="invalid-feedback" for="footerContactFormName">Напишите Ваше имя</label>
-                <input id="footerContactFormName" type="text" name="name" placeholder="Ваше имя" required>
+            <form id="contactForm" novalidate>
+                <label class="invalid-feedback" for="contactFormName">Напишите Ваше имя</label>
+                <input id="contactFormName" type="text" name="name" placeholder="Ваше имя" required>
 
-                <label class="invalid-feedback" for="footerContactFormEmail">E-mail не корректен</label>
-                <input id="footerContactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
+                <label class="invalid-feedback" for="contactFormEmail">E-mail не корректен</label>
+                <input id="contactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
 
-                <label class="invalid-feedback" for="footerContactFormTel">Wrong</label>
-                <input id="footerContactFormTel" type="tel" name="tel" placeholder="Телефон">
+                <label class="invalid-feedback" for="contactFormTel">Wrong</label>
+                <input id="contactFormTel" type="tel" name="tel" placeholder="Телефон">
 
-                <label class="invalid-feedback" for="footerContactFormMessage">Напишете Ваше сообщение</label>
-                <textarea id="footerContactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
+                <label class="invalid-feedback" for="contactFormMessage">Напишете Ваше сообщение</label>
+                <textarea id="contactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
 
                 <button type="submit" name="btn">Отправить</button>
             </form>
         </div>
         <div class="developer-line">
             <p>
-                <span>2018 <a href="#">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
+                <span>2018 <a href="index.html">Renassimo.com</a></span> <span>| Разработка и поддержка сайтов</span>
             </p>
         </div>
     </div>

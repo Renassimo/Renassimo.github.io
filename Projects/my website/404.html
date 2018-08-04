@@ -41,46 +41,17 @@
 <section class="greeting page-greeting">
     <div class="container">
         <div class="content">
-            <h1>Отзывы</h1>
         </div>
     </div>
 </section>
-<section class="page-content">
-    <div class="container testimonials-page-container">
-        <div class="content">
-            <div class="content-block testimonial-block">
-                <p>1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.</p>
-                <h6>1Consectetur adipisicing elit</h6>
-            </div>
-            <div class="content-block testimonial-block">
-                <p>2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.</p>
-                <h6>2Consectetur adipisicing elit</h6>
-            </div>
-            <div class="content-block testimonial-block">
-                <p>3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet atque
-                    ducimus earum.</p>
-                <h6>3Consectetur adipisicing elit</h6>
-            </div>
+<section class="page-404-content">
+    <div class="container">
+            <div class="content">
+                <h1>Страница не найдена</h1>
+                <p>Ой, кажется что-то пошло не так или была введена неправильная ссылка.
+                    Попробуйте перейти на главную, либо другие страницы этого сайта.</p>
         </div>
-<!--        <div class="aside sticky watchers">
-            <div class="aside-item">
-                <h6><a href="#aboutMe" class="link td-none link-outer watcher">О себе</a></h6>
-            </div>
-            <div class="aside-item">
-                <h6><a href="#myResume" class="link td-none link-outer watcher">Резюме</a></h6>
-            </div>
-            <div class="aside-item">
-                <h6><a href="#" class="link td-none link-outer">Отзывы</a></h6>
-            </div>
-        </div>-->
+        <img class="img404" src="images/greeting/testimonials.jpg">
     </div>
 </section>
 
@@ -139,18 +110,18 @@
             </div>
         </div>
         <div class="footer-form">
-            <form id="footerContactForm" novalidate>
-                <label class="invalid-feedback" for="footerContactFormName">Напишите Ваше имя</label>
-                <input id="footerContactFormName" type="text" name="name" placeholder="Ваше имя" required>
+            <form id="contactForm" novalidate>
+                <label class="invalid-feedback" for="contactFormName">Напишите Ваше имя</label>
+                <input id="contactFormName" type="text" name="name" placeholder="Ваше имя" required>
 
-                <label class="invalid-feedback" for="footerContactFormEmail">E-mail не корректен</label>
-                <input id="footerContactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
+                <label class="invalid-feedback" for="contactFormEmail">E-mail не корректен</label>
+                <input id="contactFormEmail" type="email" name="email" placeholder="Электронная почта" required>
 
-                <label class="invalid-feedback" for="footerContactFormTel">Wrong</label>
-                <input id="footerContactFormTel" type="tel" name="tel" placeholder="Телефон">
+                <label class="invalid-feedback" for="contactFormTel">Wrong</label>
+                <input id="contactFormTel" type="tel" name="tel" placeholder="Телефон">
 
-                <label class="invalid-feedback" for="footerContactFormMessage">Напишете Ваше сообщение</label>
-                <textarea id="footerContactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
+                <label class="invalid-feedback" for="contactFormMessage">Напишете Ваше сообщение</label>
+                <textarea id="contactFormMessage" type="text" name="message" placeholder="Сообщение" required></textarea>
 
                 <button type="submit" name="btn">Отправить</button>
             </form>
