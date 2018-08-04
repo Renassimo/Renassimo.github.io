@@ -210,7 +210,7 @@ $(document).ready(function () {
                 '<h4>' + name + '</h4></a>' +
                 '<h5>' + caption + '</h5>' +
                 '<div class="text">' + text + '</div>' +
-                '<a class="link td-none link-outer" target="_blank" href="' + linkOuter + '">' + linkOuterName + '</a>' +
+                '<a class="link td-none link-outer header-font" target="_blank" href="' + linkOuter + '">' + linkOuterName + '</a>' +
                 '<div class="modal-footer"><span class="time">' + date + '</span>' +
                 '<a class="link link-inner" href="' + linkInner + '">Подробнее</a></div></div>';
 

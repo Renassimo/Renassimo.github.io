@@ -1,40 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700|Vollkorn+SC:400,700|Yanone+Kaffeesatz:400,700&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Caveat:400,700|Finger+Paint|Kalam:400,700|Rock+Salt|Sarina|Sonsie+One|Federant|Bangers");
-.font1 {
-  font-family: "Yanone Kaffeesatz", sans-serif; }
-
+@import url("https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Kalam:400,700");
 .font2, body {
   font-family: "Alegreya", serif; }
 
-.font3 {
-  font-family: "Vollkorn SC", serif; }
-
-.font4, .header-font, h1, h2, h3, h4, h5, h6, .nav-menu-list, .more, button, .button, .developer-line, .footer-menu-list {
+.font4, .header-font, h1, h2, h3, h4, h5, h6, .nav-menu-list, .more, button, .button, .developer-line, .footer-menu-list, .modal-footer {
   font-family: "Exo 2", sans-serif; }
-
-.logofont1 {
-  font-family: "Caveat", cursive; }
 
 .logofont2, .brand-logo a.brand-link {
   font-family: "Kalam", cursive; }
-
-.logofont3 {
-  font-family: "Rock Salt", cursive; }
-
-.logofont4 {
-  font-family: "Finger Paint", cursive; }
-
-.logofont5 {
-  font-family: "Sarina", cursive; }
-
-.logofont6 {
-  font-family: "Sonsie One", cursive; }
-
-.logofont7 {
-  font-family: "Federant", cursive; }
-
-.logofont8 {
-  font-family: "Bangers", cursive; }
 
 body {
   background-color: #f4f4f4;
