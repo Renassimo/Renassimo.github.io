@@ -2,7 +2,9 @@
     font-family: AtariBold;
     src: url("fonts/atari_bold.ttf");
 }*/
-
+body {
+    margin: 0;
+}
 #game_window {
     width: 800px;
     height: 600px;

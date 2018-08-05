@@ -3,15 +3,12 @@
 @import "../libs/breakpoints/_variables.scss"
 @import "../libs/breakpoints/_breakpoints.scss"
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700&subset=cyrillic')
+@import url('../fonts/google/css.css?family=Alegreya:400,700|Exo+2:400,700|Kalam:700&subset=cyrillic')
 
 .font2
   font-family: 'Alegreya', serif
 .font4
   font-family: 'Exo 2', sans-serif
-
-@import url('https://fonts.googleapis.com/css?family=Kalam:400,700')
-
 .logofont2
   font-family: 'Kalam', cursive
 
@@ -90,6 +87,8 @@ a.link
   text-decoration: none
 a
   transition: all $nvSpd * 2
+.icm, a.icon
+  text-decoration: none
 
 .container
   width: 92%
@@ -783,6 +782,19 @@ footer
       @include media-breakpoint-up(md)
         margin: 0 10%
 
+.game-frame
+  //text-align: left
+  iframe
+    //display: inline-block
+    height: 650px
+    width: 850px
+    @include media-breakpoint-only(xs)
+      width: 100%
+  .iframe-wrapper
+    @include media-breakpoint-only(md)
+      transform: scale(0.8)
+    @include media-breakpoint-only(sm)
+      transform: scale(0.6)
 
 .modal
   display: none

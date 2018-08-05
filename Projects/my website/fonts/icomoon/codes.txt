@@ -1,0 +1,105 @@
+HTML
+<span class="icm icm-telegram-plane"></span>
+
+CSS
+.icm-telegram-plane:before {
+  content: "\74";
+}
+
+HTML Entity
+&#x74;
+
+Character
+t
+
+
+<span class="icm icm-whatsapp"></span>
+.icm-whatsapp:before {
+  content: "\77";
+}
+&#x77;
+w
+
+<span class="icm icm-facebook-f"></span>
+.icm-facebook-f:before {
+  content: "\66";
+}
+&#x66;
+f
+
+<span class="icm icm-skype"></span>
+.icm-skype:before {
+  content: "\73";
+}
+&#x73;
+s
+
+<span class="icm icm-vk"></span>
+.icm-vk:before {
+  content: "\76";
+}
+&#x76;
+v
+
+<span class="icm icm-calendar-check"></span>
+.icm-calendar-check:before {
+  content: "\e905";
+}
+&#xe905;
+?
+
+<span class="icm icm-edit"></span>
+.icm-edit:before {
+  content: "\e906";
+}
+&#xe906;
+?
+
+<span class="icm icm-angle-up"></span>
+.icm-angle-up:before {
+  content: "\5e";
+}
+&#x5e;
+^
+
+<span class="icm icm-at"></span>
+.icm-at:before {
+  content: "\40";
+}
+&#x40;
+@
+
+<span class="icm icm-desktop"></span>
+.icm-desktop:before {
+  content: "\e909";
+}
+&#xe909;
+?
+
+<span class="icm icm-map-marker"></span>
+.icm-map-marker:before {
+  content: "\6d";
+}
+&#x6d;
+m
+
+<span class="icm icm-mobile-alt"></span>
+.icm-mobile-alt:before {
+  content: "\e90b";
+}
+&#xe90b;
+?
+
+<span class="icm icm-phone"></span>
+.icm-phone:before {
+  content: "\70";
+}
+&#x70;
+p
+
+<span class="icm icm-angle-left"></span>
+.icm-angle-left:before {
+  content: "\3c";
+}
+&#x3c;
+<

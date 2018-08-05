@@ -1,0 +1,99 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b2mryb');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?b2mryb#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?b2mryb') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?b2mryb') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?b2mryb##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icm {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-telegram-plane {
+  &:before {
+    content: $icm-telegram-plane; 
+  }
+}
+.icm-whatsapp {
+  &:before {
+    content: $icm-whatsapp; 
+  }
+}
+.icm-facebook-f {
+  &:before {
+    content: $icm-facebook-f; 
+  }
+}
+.icm-skype {
+  &:before {
+    content: $icm-skype; 
+  }
+}
+.icm-vk {
+  &:before {
+    content: $icm-vk; 
+  }
+}
+.icm-calendar-check {
+  &:before {
+    content: $icm-calendar-check; 
+  }
+}
+.icm-edit {
+  &:before {
+    content: $icm-edit; 
+  }
+}
+.icm-angle-up {
+  &:before {
+    content: $icm-angle-up; 
+  }
+}
+.icm-at {
+  &:before {
+    content: $icm-at; 
+  }
+}
+.icm-desktop {
+  &:before {
+    content: $icm-desktop; 
+  }
+}
+.icm-map-marker {
+  &:before {
+    content: $icm-map-marker; 
+  }
+}
+.icm-mobile-alt {
+  &:before {
+    content: $icm-mobile-alt; 
+  }
+}
+.icm-phone {
+  &:before {
+    content: $icm-phone; 
+  }
+}
+.icm-angle-left {
+  &:before {
+    content: $icm-angle-left; 
+  }
+}
+

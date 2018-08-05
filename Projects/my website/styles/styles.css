@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Alegreya:400,700|Exo+2:400,700&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Kalam:400,700");
+@import url("../fonts/google/css.css?family=Alegreya:400,700|Exo+2:400,700|Kalam:700&subset=cyrillic");
 .font2, body {
   font-family: "Alegreya", serif; }
 
@@ -70,6 +69,9 @@ a.link {
 
 a {
   transition: all 300ms; }
+
+.icm, a.icon {
+  text-decoration: none; }
 
 .container {
   width: 92%; }
@@ -798,6 +800,19 @@ footer {
       @media (min-width: 768px) {
         .page-404-content .content p {
           margin: 0 10%; } }
+
+.game-frame iframe {
+  height: 650px;
+  width: 850px; }
+  @media (max-width: 575.98px) {
+    .game-frame iframe {
+      width: 100%; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .game-frame .iframe-wrapper {
+    transform: scale(0.8); } }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .game-frame .iframe-wrapper {
+    transform: scale(0.6); } }
 
 .modal {
   display: none;
