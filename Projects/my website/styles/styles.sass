@@ -783,18 +783,23 @@ footer
         margin: 0 10%
 
 .game-frame
-  //text-align: left
+  margin-bottom: 100px
   iframe
-    //display: inline-block
-    height: 650px
-    width: 850px
+    position: relative
+    height: 600px
+    width: 800px
     @include media-breakpoint-only(xs)
       width: 100%
   .iframe-wrapper
+    position: relative
     @include media-breakpoint-only(md)
-      transform: scale(0.8)
+      transform: scale(0.85)
+      iframe
+        left: -40px
     @include media-breakpoint-only(sm)
-      transform: scale(0.6)
+      transform: scale(0.52)
+      iframe
+        left: -130px
 
 .modal
   display: none

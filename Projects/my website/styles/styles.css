@@ -801,18 +801,27 @@ footer {
         .page-404-content .content p {
           margin: 0 10%; } }
 
-.game-frame iframe {
-  height: 650px;
-  width: 850px; }
-  @media (max-width: 575.98px) {
-    .game-frame iframe {
-      width: 100%; } }
-@media (min-width: 768px) and (max-width: 991.98px) {
+.game-frame {
+  margin-bottom: 100px; }
+  .game-frame iframe {
+    position: relative;
+    height: 600px;
+    width: 800px; }
+    @media (max-width: 575.98px) {
+      .game-frame iframe {
+        width: 100%; } }
   .game-frame .iframe-wrapper {
-    transform: scale(0.8); } }
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .game-frame .iframe-wrapper {
-    transform: scale(0.6); } }
+    position: relative; }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .game-frame .iframe-wrapper {
+        transform: scale(0.85); }
+        .game-frame .iframe-wrapper iframe {
+          left: -40px; } }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .game-frame .iframe-wrapper {
+        transform: scale(0.52); }
+        .game-frame .iframe-wrapper iframe {
+          left: -130px; } }
 
 .modal {
   display: none;
